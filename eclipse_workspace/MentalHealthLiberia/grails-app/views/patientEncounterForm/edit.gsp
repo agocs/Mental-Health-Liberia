@@ -33,6 +33,15 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                  <label for="clinicianID"><g:message code="patientEncounterForm.clinicianID.label" default="Clinician ID" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: patientEncounterFormInstance, field: 'clinicianID', 'errors')}">
+                                    <g:textField name="clinicianID" value="${patientEncounterFormInstance?.clinicianID}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                   <label for="age"><g:message code="patientEncounterForm.age.label" default="Age" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: patientEncounterFormInstance, field: 'age', 'errors')}">
@@ -96,15 +105,6 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="clinicianID"><g:message code="patientEncounterForm.clinicianID.label" default="Clinician ID" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: patientEncounterFormInstance, field: 'clinicianID', 'errors')}">
-                                    <g:textField name="clinicianID" value="${patientEncounterFormInstance?.clinicianID}" />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
                                   <label for="clinicianTrainingLevel"><g:message code="patientEncounterForm.clinicianTrainingLevel.label" default="Clinician Training Level" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: patientEncounterFormInstance, field: 'clinicianTrainingLevel', 'errors')}">
@@ -154,6 +154,15 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: patientEncounterFormInstance, field: 'dateOfBirth', 'errors')}">
                                     <g:textField name="dateOfBirth" value="${patientEncounterFormInstance?.dateOfBirth}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="dateOfService"><g:message code="patientEncounterForm.dateOfService.label" default="Date Of Service" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: patientEncounterFormInstance, field: 'dateOfService', 'errors')}">
+                                    <g:textField name="dateOfService" value="${patientEncounterFormInstance?.dateOfService}" />
                                 </td>
                             </tr>
                         
@@ -474,10 +483,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="patientID"><g:message code="patientEncounterForm.patientID.label" default="Patient ID" /></label>
+                                  <label for="patientName"><g:message code="patientEncounterForm.patientName.label" default="Patient Name" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: patientEncounterFormInstance, field: 'patientID', 'errors')}">
-                                    <g:textField name="patientID" value="${patientEncounterFormInstance?.patientID}" />
+                                <td valign="top" class="value ${hasErrors(bean: patientEncounterFormInstance, field: 'patientName', 'errors')}">
+                                    <g:textField name="patientName" value="${patientEncounterFormInstance?.patientName}" />
                                 </td>
                             </tr>
                         

@@ -12,6 +12,24 @@ class AuthController {
     def login = {
         return [ username: params.username, rememberMe: (params.rememberMe != null), targetUri: params.targetUri ]
     }
+	
+	def uploadAuthenticate = {
+        def authToken = new UsernamePasswordToken(params.username, params.password as String)
+		println "authenticating with username:${params.username} and password:${params.password}"
+        try{
+            // Perform the actual login. An AuthenticationException
+            // will be thrown if the username is unrecognised or the
+            // password is incorrect.
+            SecurityUtils.subject.login(authToken)
+
+            render(status: 200)
+        }
+        catch (AuthenticationException ex){
+            // Authentication failed, so display the appropriate message
+            // on the login page.
+			render(status: 403)
+        }
+	}
 
     def signIn = {
         def authToken = new UsernamePasswordToken(params.username, params.password as String)
@@ -31,7 +49,6 @@ class AuthController {
             targetUri = savedRequest.requestURI - request.contextPath
             if (savedRequest.queryString) targetUri = targetUri + '?' + savedRequest.queryString
         }
-        
         try{
             // Perform the actual login. An AuthenticationException
             // will be thrown if the username is unrecognised or the

@@ -10,14 +10,15 @@ class ShiroSecurityFilters {
                 if (!controllerName) return true
             }
         }
-		
-		formUpload(controller:"patientEncounterForm", action:"upload") {
-			before = {
-				return true
-			}
-		}
-        formShowOrModify(controller: "patientEncounterForm", action: "create,save,update,show,search") {
+        patientEncounterForm(controller: "patientEncounterForm", action: "*") {
             before = {
+				
+				// allow anyone to access upload forms servlet but...
+				// authentication is performed in 'upload' action manually
+				if (actionName == "upload") {
+					return true;
+				}
+				
                 // Access control by convention.
                 accessControl()
             }

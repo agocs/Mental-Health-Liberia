@@ -10,10 +10,10 @@
     <body>
         <div class="nav">
             <span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
-            <span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">Create New Patient Encounter Form</g:link></span>
         </div>
         <div class="body">
-            <h1><g:message code="default.list.label" args="[entityName]" /></h1>
+            <h1>List of Patient Encounter Forms</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -22,17 +22,13 @@
                     <thead>
                         <tr>
                         
-                            <g:sortableColumn property="id" title="${message(code: 'patientEncounterForm.id.label', default: 'Id')}" />
+                            <g:sortableColumn property="patientID" title="${message(code: 'patientEncounterForm.id.label', default: 'Patient ID')}" />
                         
-                            <g:sortableColumn property="age" title="${message(code: 'patientEncounterForm.age.label', default: 'Age')}" />
+                            <g:sortableColumn property="clinicianID" title="${message(code: 'patientEncounterForm.clinicianID.label', default: 'Clinician ID')}" />
                         
-                            <g:sortableColumn property="amitriptyline" title="${message(code: 'patientEncounterForm.amitriptyline.label', default: 'Amitriptyline')}" />
-                        
-                            <g:sortableColumn property="anxietyDisorder" title="${message(code: 'patientEncounterForm.anxietyDisorder.label', default: 'Anxiety Disorder')}" />
-                        
-                            <g:sortableColumn property="cage" title="${message(code: 'patientEncounterForm.cage.label', default: 'Cage')}" />
-                        
-                            <g:sortableColumn property="carbamazepine" title="${message(code: 'patientEncounterForm.carbamazepine.label', default: 'Carbamazepine')}" />
+                            <g:sortableColumn property="locationOfService" title="${message(code: 'patientEncounterForm.locationOfService.label', default: 'Location of Service')}" />
+                            
+                            <g:sortableColumn property="dateOfService" title="${message(code: 'patientEncounterForm.dateOfService.label', default: 'Date of Service')}" />
                         
                         </tr>
                     </thead>
@@ -42,15 +38,11 @@
                         
                             <td><g:link action="show" id="${patientEncounterFormInstance.id}">${fieldValue(bean: patientEncounterFormInstance, field: "id")}</g:link></td>
                         
-                            <td>${fieldValue(bean: patientEncounterFormInstance, field: "age")}</td>
+                            <td>${fieldValue(bean: patientEncounterFormInstance, field: "clinicianID")}</td>
                         
-                            <td><g:formatBoolean boolean="${patientEncounterFormInstance.amitriptyline}" /></td>
-                        
-                            <td>${fieldValue(bean: patientEncounterFormInstance, field: "anxietyDisorder")}</td>
-                        
-                            <td>${fieldValue(bean: patientEncounterFormInstance, field: "cage")}</td>
-                        
-                            <td><g:formatBoolean boolean="${patientEncounterFormInstance.carbamazepine}" /></td>
+                            <td>${fieldValue(bean: patientEncounterFormInstance, field: "locationOfService")}</td>
+                            
+                            <td>${fieldValue(bean: patientEncounterFormInstance, field: "dateOfService")}</td>
                         
                         </tr>
                     </g:each>

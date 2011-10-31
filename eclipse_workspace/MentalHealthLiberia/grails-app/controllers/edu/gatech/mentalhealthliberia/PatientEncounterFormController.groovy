@@ -6,6 +6,10 @@ import java.io.InputStreamReader;
 import grails.converters.*
 import org.codehaus.groovy.grails.web.json.*; // package containing JSONObject, JSONArray,...
 
+import org.apache.shiro.SecurityUtils
+import org.apache.shiro.authc.AuthenticationException
+import org.apache.shiro.authc.UsernamePasswordToken
+
 class PatientEncounterFormController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -100,17 +104,32 @@ class PatientEncounterFormController {
         }
         else {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'patientEncounterForm.label', default: 'PatientEncounterForm'), params.id])}"
-            redirect(action: "list")
+            redirect(action: "list")//http://localhost:8081/MentalHealthLiberia/patientEncounterForm/list
         }
     }
 	
 	def upload = {
 		println "upload fired";
+		
 		if (request.method == "POST") {
 			println params.data;
-			
+	
+			def authToken = new UsernamePasswordToken(params.username, params.password as String)
+			try{
+				// Perform the actual login. An AuthenticationException
+				// will be thrown if the username is unrecognised or the
+				// password is incorrect.
+				SecurityUtils.subject.login(authToken)
+			}
+			catch (AuthenticationException ex){
+				// Authentication failed, so display the appropriate message
+				// on the login page.
+				render(status: 403)
+			}
+					
 			PatientEncounterForm patientEncounterForm = new PatientEncounterForm(JSON.parse(params.data));
-			if (patientEncounterForm.save()) {
+			
+			if (patientEncounterForm.validate() && patientEncounterForm.save()) {
 				render(status: 200, text: 'Success');
 			} else {
 				render(status: 503, text: 'Failed to save form');

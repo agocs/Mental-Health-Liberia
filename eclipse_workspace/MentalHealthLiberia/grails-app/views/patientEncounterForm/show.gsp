@@ -30,6 +30,13 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name"><g:message code="patientEncounterForm.clinicianID.label" default="Clinician ID" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: patientEncounterFormInstance, field: "clinicianID")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="patientEncounterForm.age.label" default="Age" /></td>
                             
                             <td valign="top" class="value">${fieldValue(bean: patientEncounterFormInstance, field: "age")}</td>
@@ -79,13 +86,6 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="patientEncounterForm.clinicianID.label" default="Clinician ID" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: patientEncounterFormInstance, field: "clinicianID")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="patientEncounterForm.clinicianTrainingLevel.label" default="Clinician Training Level" /></td>
                             
                             <td valign="top" class="value">${fieldValue(bean: patientEncounterFormInstance, field: "clinicianTrainingLevel")}</td>
@@ -124,6 +124,13 @@
                             <td valign="top" class="name"><g:message code="patientEncounterForm.dateOfBirth.label" default="Date Of Birth" /></td>
                             
                             <td valign="top" class="value">${fieldValue(bean: patientEncounterFormInstance, field: "dateOfBirth")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="patientEncounterForm.dateOfService.label" default="Date Of Service" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: patientEncounterFormInstance, field: "dateOfService")}</td>
                             
                         </tr>
                     
@@ -373,9 +380,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="patientEncounterForm.patientID.label" default="Patient ID" /></td>
+                            <td valign="top" class="name"><g:message code="patientEncounterForm.patientName.label" default="Patient Name" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: patientEncounterFormInstance, field: "patientID")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: patientEncounterFormInstance, field: "patientName")}</td>
                             
                         </tr>
                     
