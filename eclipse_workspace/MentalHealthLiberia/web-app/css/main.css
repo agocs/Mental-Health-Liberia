@@ -5,6 +5,14 @@ html * {
 
 /* GENERAL */
 
+.topBar { display: block; height: 110px; overflow: hidden; background: url(../images/topBg.jpg) repeat-x; }
+
+.header { display: block; width: 945px; margin: 0 auto 0 auto; }
+
+.loginCallout { display: block; float: right; margin-top: 10px; margin-right: 5px;}
+
+.bold { font-weight: bold; }
+
 .spinner {
     padding: 5px;
     position: absolute;
