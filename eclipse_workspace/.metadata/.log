@@ -94,3 +94,801 @@ HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca
 HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
 	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
 	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1af4309),sourcePriority=16384)
+!SESSION 2011-10-28 09:17:08.863 -----------------------------------------------
+eclipse.buildId=2.3.2.201003230009-RELEASE
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product com.springsource.sts.ide
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.springsource.sts.ide
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-10-28 09:17:51.017
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:17:51.017
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:17:51.017
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:17:51.017
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:17:51.017
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:17:51.017
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:17:51.017
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:17:51.017
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:17:51.017
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:17:51.017
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:17:51.017
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@19845fb),sourcePriority=16384)
+
+!ENTRY com.springsource.sts.ide.ui 4 0 2011-10-28 09:17:59.487
+!MESSAGE An unexpected error occurred while retrieving feed content.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.toException(HttpClientTransportService.java:205)
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.stream(HttpClientTransportService.java:187)
+	at com.springsource.sts.core.HttpUtil.stream(HttpUtil.java:112)
+	at com.springsource.sts.internal.ide.ui.editors.AggregateFeedJob.run(AggregateFeedJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 com.springsource.sts.core 4 0 2011-10-28 09:17:59.488
+!MESSAGE Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+!SESSION 2011-10-28 09:34:48.725 -----------------------------------------------
+eclipse.buildId=2.3.2.201003230009-RELEASE
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product com.springsource.sts.ide
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.springsource.sts.ide
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-10-28 09:35:44.516
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:35:44.516
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:35:44.516
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:35:44.516
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:35:44.516
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:35:44.516
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:35:44.516
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:35:44.516
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:35:44.516
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:35:44.516
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 09:35:44.516
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@91b9b0),sourcePriority=16384)
+
+!ENTRY com.springsource.sts.ide.ui 4 0 2011-10-28 09:35:52.446
+!MESSAGE An unexpected error occurred while retrieving feed content.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.toException(HttpClientTransportService.java:205)
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.stream(HttpClientTransportService.java:187)
+	at com.springsource.sts.core.HttpUtil.stream(HttpUtil.java:112)
+	at com.springsource.sts.internal.ide.ui.editors.AggregateFeedJob.run(AggregateFeedJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 com.springsource.sts.core 4 0 2011-10-28 09:35:52.448
+!MESSAGE Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+!SESSION 2011-10-28 11:16:03.074 -----------------------------------------------
+eclipse.buildId=2.3.2.201003230009-RELEASE
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product com.springsource.sts.ide
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.springsource.sts.ide
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-10-28 11:17:01.423
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 11:17:01.423
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 11:17:01.423
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 11:17:01.423
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 11:17:01.423
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 11:17:01.423
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 11:17:01.423
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 11:17:01.423
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 11:17:01.423
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 11:17:01.423
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 11:17:01.423
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18fc9ba),sourcePriority=16384)
+
+!ENTRY com.springsource.sts.ide.ui 4 0 2011-10-28 11:17:10.273
+!MESSAGE An unexpected error occurred while retrieving feed content.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.toException(HttpClientTransportService.java:205)
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.stream(HttpClientTransportService.java:187)
+	at com.springsource.sts.core.HttpUtil.stream(HttpUtil.java:112)
+	at com.springsource.sts.internal.ide.ui.editors.AggregateFeedJob.run(AggregateFeedJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 com.springsource.sts.core 4 0 2011-10-28 11:17:10.274
+!MESSAGE Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+!SESSION 2011-10-28 13:16:13.291 -----------------------------------------------
+eclipse.buildId=2.3.2.201003230009-RELEASE
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product com.springsource.sts.ide
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.springsource.sts.ide
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-10-28 13:17:10.884
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:17:10.884
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:17:10.884
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:17:10.884
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:17:10.884
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:17:10.884
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:17:10.885
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:17:10.885
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:17:10.885
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:17:10.885
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:17:10.885
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15fa713),sourcePriority=16384)
+
+!ENTRY com.springsource.sts.ide.ui 4 0 2011-10-28 13:17:18.374
+!MESSAGE An unexpected error occurred while retrieving feed content.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.toException(HttpClientTransportService.java:205)
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.stream(HttpClientTransportService.java:187)
+	at com.springsource.sts.core.HttpUtil.stream(HttpUtil.java:112)
+	at com.springsource.sts.internal.ide.ui.editors.AggregateFeedJob.run(AggregateFeedJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 com.springsource.sts.core 4 0 2011-10-28 13:17:18.376
+!MESSAGE Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+!SESSION 2011-10-28 13:58:19.194 -----------------------------------------------
+eclipse.buildId=2.3.2.201003230009-RELEASE
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product com.springsource.sts.ide
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.springsource.sts.ide
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-10-28 13:59:05.831
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:59:05.831
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:59:05.831
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:59:05.831
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:59:05.831
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:59:05.831
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:59:05.831
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:59:05.831
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:59:05.831
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:59:05.831
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-28 13:59:05.832
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1395dab),sourcePriority=16384)
+
+!ENTRY com.springsource.sts.ide.ui 4 0 2011-10-28 13:59:31.883
+!MESSAGE An unexpected error occurred while retrieving feed content.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.toException(HttpClientTransportService.java:205)
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.stream(HttpClientTransportService.java:187)
+	at com.springsource.sts.core.HttpUtil.stream(HttpUtil.java:112)
+	at com.springsource.sts.internal.ide.ui.editors.AggregateFeedJob.run(AggregateFeedJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 com.springsource.sts.core 4 0 2011-10-28 13:59:31.884
+!MESSAGE Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+!SESSION 2011-10-29 10:26:22.118 -----------------------------------------------
+eclipse.buildId=2.3.2.201003230009-RELEASE
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product com.springsource.sts.ide
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.springsource.sts.ide
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-10-29 10:27:43.971
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-29 10:27:43.971
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-29 10:27:43.971
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-29 10:27:43.971
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-29 10:27:43.971
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-29 10:27:43.971
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-29 10:27:43.971
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-29 10:27:43.971
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-29 10:27:43.971
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-29 10:27:43.972
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-29 10:27:43.972
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1d41318),sourcePriority=16384)
+
+!ENTRY org.eclipse.ui 4 0 2011-10-29 10:27:55.179
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTException: Widget is disposed)
+	at org.eclipse.swt.SWT.error(SWT.java:3884)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:137)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3468)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3115)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:3884)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.SWT.error(SWT.java:3770)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:388)
+	at org.eclipse.swt.widgets.Composite.getChildren(Composite.java:545)
+	at com.springsource.sts.internal.ide.ui.editors.DashboardMainPage$30$1.run(DashboardMainPage.java:1091)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	... 22 more
+
+!ENTRY com.springsource.sts.ide.ui 4 0 2011-10-29 10:27:58.335
+!MESSAGE An unexpected error occurred while retrieving feed content.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.toException(HttpClientTransportService.java:205)
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.stream(HttpClientTransportService.java:187)
+	at com.springsource.sts.core.HttpUtil.stream(HttpUtil.java:112)
+	at com.springsource.sts.internal.ide.ui.editors.AggregateFeedJob.run(AggregateFeedJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 com.springsource.sts.core 4 0 2011-10-29 10:27:58.335
+!MESSAGE Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+
+!ENTRY org.eclipse.ui 4 0 2011-10-29 10:27:58.336
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTException: Widget is disposed)
+	at org.eclipse.swt.SWT.error(SWT.java:3884)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:137)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3468)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3115)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:3884)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.SWT.error(SWT.java:3770)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:388)
+	at org.eclipse.swt.widgets.Composite.getChildren(Composite.java:545)
+	at com.springsource.sts.internal.ide.ui.editors.DashboardMainPage.displayFeeds(DashboardMainPage.java:975)
+	at com.springsource.sts.internal.ide.ui.editors.DashboardMainPage.access$4(DashboardMainPage.java:955)
+	at com.springsource.sts.internal.ide.ui.editors.DashboardMainPage$25$1.run(DashboardMainPage.java:947)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	... 22 more
+!SESSION 2011-10-31 09:53:36.222 -----------------------------------------------
+eclipse.buildId=2.3.2.201003230009-RELEASE
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product com.springsource.sts.ide
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.springsource.sts.ide
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-10-31 09:54:33.698
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-31 09:54:33.698
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction4,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-31 09:54:33.698
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction2,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-31 09:54:33.698
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction8,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-31 09:54:33.698
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction5,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-31 09:54:33.698
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction35,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootOptionsFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-31 09:54:33.698
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction36,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-31 09:54:33.698
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction10,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootConfigFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-31 09:54:33.698
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction26,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootJimpleFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-31 09:54:33.698
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction27,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.SootGrimpFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-10-31 09:54:33.698
+!MESSAGE Conflict for 'AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28':
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+HandlerActivation(commandId=AUTOGEN:::ca.mcgill.sable.soot.launching.soot.oc3/ca.mcgill.sable.soot.popupaction28,
+	handler=ActionDelegateHandlerProxy(null,ca.mcgill.sable.soot.launching.DavaDecompileAppFromJavaFileLauncher),
+	expression=WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce9f9d),sourcePriority=16384)
+
+!ENTRY com.springsource.sts.ide.ui 4 0 2011-10-31 09:54:45.358
+!MESSAGE An unexpected error occurred while retrieving feed content.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.toException(HttpClientTransportService.java:205)
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.stream(HttpClientTransportService.java:187)
+	at com.springsource.sts.core.HttpUtil.stream(HttpUtil.java:112)
+	at com.springsource.sts.internal.ide.ui.editors.AggregateFeedJob.run(AggregateFeedJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 com.springsource.sts.core 4 0 2011-10-31 09:54:45.360
+!MESSAGE Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404

@@ -12,10 +12,6 @@ import java.io.Serializable;
  */
 public class PatientEncounterForm implements Serializable {
 
-    public String getDateOfService() {
-        return dateOfService;
-    }
-    
     public String getAge() {
         return age;
     }
@@ -70,6 +66,10 @@ public class PatientEncounterForm implements Serializable {
 
     public String getDateOfBirth() {
         return dateOfBirth;
+    }
+
+    public String getDateOfService() {
+        return dateOfService;
     }
 
     public boolean isDepakote() {
@@ -212,8 +212,8 @@ public class PatientEncounterForm implements Serializable {
         return otherSedative;
     }
 
-    public String getPatientID() {
-        return patientID;
+    public String getPatientName() {
+        return patientName;
     }
 
     public boolean isPhenobarbital() {
@@ -280,10 +280,6 @@ public class PatientEncounterForm implements Serializable {
         return trihexyphenidyl;
     }
 
-    public void setDateOfService(String dateOfService) {
-        this.dateOfService = dateOfService;
-    }
-    
     public void setAge(String age) {
         this.age = age;
     }
@@ -338,6 +334,10 @@ public class PatientEncounterForm implements Serializable {
 
     public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public void setDateOfService(String dateOfService) {
+        this.dateOfService = dateOfService;
     }
 
     public void setDepakote(boolean depakote) {
@@ -480,8 +480,8 @@ public class PatientEncounterForm implements Serializable {
         this.otherSedative = otherSedative;
     }
 
-    public void setPatientID(String patientID) {
-        this.patientID = patientID;
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
     }
 
     public void setPhenobarbital(boolean phenobarbital) {
@@ -547,21 +547,27 @@ public class PatientEncounterForm implements Serializable {
     public void setTrihexyphenidyl(boolean trihexyphenidyl) {
         this.trihexyphenidyl = trihexyphenidyl;
     }
+
+    
+    
+    // Clinician Info
+    private String clinicianID;
     
     // Basic Information
     private String dateOfService;
-    private String patientID;
-    private String clinicianID;
     private String locationOfService;
     private String reasonForVisit;
     private String clinicianTrainingLevel;
     private String referralSource;
     
-    // Patient Demographics
+    // Patient Demographics (used for generating unique ID)
+    private String patientName;
     private String dateOfBirth;
     private String gender;
     private String fathersName;
     private String placeOfBirth;
+    
+    // Patient Demographics
     private String age;
     private String countyOfResidence;
     private String distanceTraveled;

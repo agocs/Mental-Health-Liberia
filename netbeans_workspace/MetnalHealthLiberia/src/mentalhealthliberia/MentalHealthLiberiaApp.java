@@ -12,8 +12,21 @@ import org.jdesktop.application.SingleFrameApplication;
  */
 public class MentalHealthLiberiaApp extends SingleFrameApplication {
 
-    public static String dataDirectory = "/home/greg/mentalHealthLiberiaData/";
-    public static String dataSocket = "http://localhost:8081/MentalHealthLiberia/patientEncounterForm/upload";
+    private String dataDirectory = "/home/greg/mentalHealthLiberiaData/";
+    private String dataSocket = "http://localhost:8081/MentalHealthLiberia/patientEncounterForm/upload";
+    private String authenticationSocket = "http://localhost:8081/MentalHealthLiberia/auth/uploadAuthenticate";
+    
+    public String getDataDirectory() {
+        return this.dataDirectory;
+    }
+    
+    public String getDataSocket() {
+        return this.dataSocket;
+    }
+    
+    public String getAuthenticationSocket() {
+        return this.authenticationSocket;
+    }
     
     /**
      * At startup create and show the main frame of the application.

@@ -171,16 +171,6 @@ public class MentalHealthLiberiaView extends FrameView {
         jLabel10 = new javax.swing.JLabel();
         patientDemographicsOuterPanel = new javax.swing.JPanel();
         patientDemographicsPanel = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        dateOfBirth = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        placeOfBirth = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        gender1 = new javax.swing.JRadioButton();
-        gender2 = new javax.swing.JRadioButton();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        fathersName = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         age = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
@@ -196,8 +186,6 @@ public class MentalHealthLiberiaView extends FrameView {
         jLabel21 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         education = new javax.swing.JList();
-        jLabel22 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
         jLabel23 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
@@ -304,7 +292,6 @@ public class MentalHealthLiberiaView extends FrameView {
         dischargeDisposition = new javax.swing.JList();
         reportData1 = new javax.swing.JRadioButton();
         reportData2 = new javax.swing.JRadioButton();
-        genderGroup = new javax.swing.ButtonGroup();
         counselingGroup = new javax.swing.ButtonGroup();
         followupCareMedicationsGroup = new javax.swing.ButtonGroup();
         followupCareCounselingGroup = new javax.swing.ButtonGroup();
@@ -611,98 +598,12 @@ public class MentalHealthLiberiaView extends FrameView {
         patientDemographicsPanel.setName("patientDemographicsPanel"); // NOI18N
         patientDemographicsPanel.setLayout(new java.awt.GridBagLayout());
 
-        jLabel11.setFont(resourceMap.getFont("dateOfBirthLabel.font")); // NOI18N
-        jLabel11.setText(resourceMap.getString("dateOfBirthLabel.text")); // NOI18N
-        jLabel11.setName("dateOfBirthLabel"); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        patientDemographicsPanel.add(jLabel11, gridBagConstraints);
-
-        dateOfBirth.setText(resourceMap.getString("dateOfBirth.text")); // NOI18N
-        dateOfBirth.setName("dateOfBirth"); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        patientDemographicsPanel.add(dateOfBirth, gridBagConstraints);
-
-        jLabel12.setFont(resourceMap.getFont("placeOfBirthLabel.font")); // NOI18N
-        jLabel12.setText(resourceMap.getString("placeOfBirthLabel.text")); // NOI18N
-        jLabel12.setName("placeOfBirthLabel"); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        patientDemographicsPanel.add(jLabel12, gridBagConstraints);
-
-        placeOfBirth.setText(resourceMap.getString("placeOfBirth.text")); // NOI18N
-        placeOfBirth.setName("placeOfBirth"); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        patientDemographicsPanel.add(placeOfBirth, gridBagConstraints);
-
-        jLabel13.setFont(resourceMap.getFont("genderLabel.font")); // NOI18N
-        jLabel13.setText(resourceMap.getString("genderLabel.text")); // NOI18N
-        jLabel13.setName("genderLabel"); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        patientDemographicsPanel.add(jLabel13, gridBagConstraints);
-
-        genderGroup.add(gender1);
-        gender1.setText(resourceMap.getString("gender1.text")); // NOI18N
-        gender1.setName("gender1"); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        patientDemographicsPanel.add(gender1, gridBagConstraints);
-
-        genderGroup.add(gender2);
-        gender2.setText(resourceMap.getString("gender2.text")); // NOI18N
-        gender2.setName("gender2"); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        patientDemographicsPanel.add(gender2, gridBagConstraints);
-
-        jLabel14.setText(resourceMap.getString("unknownDOBLabel.text")); // NOI18N
-        jLabel14.setName("unknownDOBLabel"); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        patientDemographicsPanel.add(jLabel14, gridBagConstraints);
-
-        jLabel15.setFont(resourceMap.getFont("fathersNameLabel.font")); // NOI18N
-        jLabel15.setText(resourceMap.getString("fathersNameLabel.text")); // NOI18N
-        jLabel15.setName("fathersNameLabel"); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        patientDemographicsPanel.add(jLabel15, gridBagConstraints);
-
-        fathersName.setText(resourceMap.getString("fathersName.text")); // NOI18N
-        fathersName.setName("fathersName"); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        patientDemographicsPanel.add(fathersName, gridBagConstraints);
-
         jLabel16.setFont(resourceMap.getFont("ageLabel.font")); // NOI18N
         jLabel16.setText(resourceMap.getString("ageLabel.text")); // NOI18N
         jLabel16.setName("ageLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(jLabel16, gridBagConstraints);
 
@@ -710,7 +611,7 @@ public class MentalHealthLiberiaView extends FrameView {
         age.setName("age"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(age, gridBagConstraints);
 
@@ -719,7 +620,7 @@ public class MentalHealthLiberiaView extends FrameView {
         jLabel17.setName("countyLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(jLabel17, gridBagConstraints);
 
@@ -728,7 +629,7 @@ public class MentalHealthLiberiaView extends FrameView {
         countyOfResidence.setName("county"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(countyOfResidence, gridBagConstraints);
 
@@ -737,7 +638,7 @@ public class MentalHealthLiberiaView extends FrameView {
         jLabel18.setName("distanceLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(jLabel18, gridBagConstraints);
 
@@ -745,7 +646,7 @@ public class MentalHealthLiberiaView extends FrameView {
         distanceTraveled.setName("distance"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(distanceTraveled, gridBagConstraints);
 
@@ -754,7 +655,7 @@ public class MentalHealthLiberiaView extends FrameView {
         jLabel19.setName("employmentLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(jLabel19, gridBagConstraints);
 
@@ -770,7 +671,7 @@ public class MentalHealthLiberiaView extends FrameView {
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 13;
+        gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(jScrollPane3, gridBagConstraints);
 
@@ -779,7 +680,7 @@ public class MentalHealthLiberiaView extends FrameView {
         jLabel20.setName("maritalStatusLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(jLabel20, gridBagConstraints);
 
@@ -795,7 +696,7 @@ public class MentalHealthLiberiaView extends FrameView {
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 13;
+        gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(jScrollPane4, gridBagConstraints);
 
@@ -804,7 +705,7 @@ public class MentalHealthLiberiaView extends FrameView {
         jLabel21.setName("educationLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(jLabel21, gridBagConstraints);
 
@@ -820,47 +721,30 @@ public class MentalHealthLiberiaView extends FrameView {
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 13;
+        gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(jScrollPane5, gridBagConstraints);
-
-        jLabel22.setFont(resourceMap.getFont("demographicsFirstVisitLabel.font")); // NOI18N
-        jLabel22.setText(resourceMap.getString("demographicsFirstVisitLabel.text")); // NOI18N
-        jLabel22.setName("demographicsFirstVisitLabel"); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        patientDemographicsPanel.add(jLabel22, gridBagConstraints);
-
-        jSeparator2.setName("jSeparator2"); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        patientDemographicsPanel.add(jSeparator2, gridBagConstraints);
 
         jLabel23.setFont(resourceMap.getFont("demographicsLabel.font")); // NOI18N
         jLabel23.setText(resourceMap.getString("demographicsLabel.text")); // NOI18N
         jLabel23.setName("demographicsLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(jLabel23, gridBagConstraints);
 
         jSeparator3.setName("jSeparator3"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 4;
         patientDemographicsPanel.add(jSeparator3, gridBagConstraints);
 
         jSeparator4.setName("jSeparator4"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         patientDemographicsPanel.add(jSeparator4, gridBagConstraints);
@@ -1742,7 +1626,7 @@ private void generatePatientIDClicked(java.awt.event.MouseEvent evt) {//GEN-FIRS
 private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     if (generatePatientIDBox == null) {
         JFrame mainFrame = MentalHealthLiberiaApp.getApplication().getMainFrame();
-        generatePatientIDBox = new MentalHealthLiberiaPatientID(mainFrame, patientID);
+        generatePatientIDBox = new MentalHealthLiberiaPatientID(mainFrame, this);
         generatePatientIDBox.setLocationRelativeTo(mainFrame);
     }
     MentalHealthLiberiaApp.getApplication().show(generatePatientIDBox);
@@ -1790,6 +1674,42 @@ private boolean extractBoolean(Object box) {
     return false;
 }
 
+private String dateOfBirth; // hash of date of birth
+private String fathersName; // hash of father's name
+private String placeOfBirth; // hash of place of birth
+private String gender;
+private String patientName; // hash of patient name
+
+private String password; // used for authentication, not stored
+
+public void setPassword(String password) {
+    this.password = password;
+}
+
+public void setDateOfBirth(String dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+}
+
+public void setFathersName(String fathersName) {
+    this.fathersName = fathersName;
+}
+
+public void setPlaceOfBirth(String placeOfBirth) {
+    this.placeOfBirth = placeOfBirth;
+}
+
+public void setGender(String gender) {
+    this.gender = gender;
+}
+
+public void setPatientsName(String patientName) {
+    this.patientName = patientName;
+}
+
+public void patientIDGenerated() {
+    this.patientID.setText("Generated");
+}
+
 private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveMenuItemActionPerformed
     // Save all form data
     
@@ -1799,18 +1719,21 @@ private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-
     
     // Basic Information
     formData.setDateOfService(extractValue(this.dateOfService));
-    formData.setPatientID(extractValue(this.patientID));
+    //formData.setPatientID(extractValue(this.patientID));
     formData.setClinicianID(extractValue(this.clinicianID));
     formData.setLocationOfService(extractValue(this.locationOfService));
     formData.setReasonForVisit(extractValue(this.reasonForVisit));
     formData.setClinicianTrainingLevel(extractValue(this.clinicianTrainingLevel));
     formData.setReferralSource(extractValue(this.referralSource));
     
+    // Patient Demographics (used for generating unique ID)
+    formData.setPatientName(this.patientName);
+    formData.setDateOfBirth(this.dateOfBirth);
+    formData.setGender(this.gender);
+    formData.setFathersName(this.fathersName);
+    formData.setPlaceOfBirth(this.placeOfBirth);
+    
     // Patient Demographics
-    formData.setDateOfBirth(extractValue(this.dateOfBirth));
-    formData.setGender(extractValue(this.genderGroup));
-    formData.setFathersName(extractValue(this.fathersName));
-    formData.setPlaceOfBirth(extractValue(this.placeOfBirth));
     formData.setAge(extractValue(this.age));
     formData.setCountyOfResidence(extractValue(this.countyOfResidence));
     formData.setDistanceTraveled(extractValue(this.distanceTraveled));
@@ -1875,11 +1798,11 @@ private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-
     formData.setDischargeDisposition(extractValue(this.dischargeDisposition));
     formData.setReportData(extractBoolean(this.permissionToReportGroup));
     
-    File directory = new File(MentalHealthLiberiaApp.dataDirectory);
+    File directory = new File(MentalHealthLiberiaApp.getApplication().getDataDirectory());
     if (directory.isDirectory()) {
         Calendar calendar = Calendar.getInstance();
         try {
-            File newFile = new File(directory.getAbsolutePath() + "/" + formData.getPatientID() + "_" + calendar.getTimeInMillis());
+            File newFile = new File(directory.getAbsolutePath() + "/" + formData.getPatientName() + "_" + calendar.getTimeInMillis());
             newFile.createNewFile();
             BufferedWriter writer = new BufferedWriter(new FileWriter(newFile));
             JSONSerializer serializer = new JSONSerializer();
@@ -1894,7 +1817,7 @@ private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-
     }
 }//GEN-LAST:event_saveMenuItemActionPerformed
 
-private void sendFile(File file) {
+private boolean sendFile(File file, String username, String password) {
     try {
         // Construct data
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
@@ -1904,15 +1827,19 @@ private void sendFile(File file) {
             data += curr;
             curr = reader.readLine();
         }
+        
+        // append password field
+        
         reader.close();
         
         String charset = "UTF-8";
-        String query = String.format("data=%s", URLEncoder.encode(data, charset));
+        String query = String.format("username=%s&password=%s&data=%s", URLEncoder.encode(username, charset), 
+                URLEncoder.encode(password, charset), URLEncoder.encode(data, charset));
         System.out.println(query);
         
         try {
             // Send data
-            URL url = new URL(MentalHealthLiberiaApp.dataSocket);
+            URL url = new URL(MentalHealthLiberiaApp.getApplication().getDataSocket());
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             conn.setDoOutput(true);
             OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
@@ -1928,6 +1855,8 @@ private void sendFile(File file) {
             wr.close();
             rd.close();
             
+            return true;
+            
         } catch (Exception e) {
             System.err.println("Error occured while transmitting data.\n" +
                     "Please contact a system administrator.");
@@ -1939,18 +1868,71 @@ private void sendFile(File file) {
         System.err.println(e.getMessage());
         e.printStackTrace();
     }
+    
+    return false;
 }
 
 private void uploadMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uploadMenuItemActionPerformed
+    if (uploadFormsBox == null) {
+        JFrame mainFrame = MentalHealthLiberiaApp.getApplication().getMainFrame();
+        uploadFormsBox = new MentalHealthLiberiaUploadView(mainFrame, this);
+        uploadFormsBox.setLocationRelativeTo(mainFrame);
+    }
+    MentalHealthLiberiaApp.getApplication().show(uploadFormsBox);
+}//GEN-LAST:event_uploadMenuItemActionPerformed
+
+// package scoped
+void performUpload(String username, String password) {
     System.out.println("Uploading forms");
-    File directory = new File(MentalHealthLiberiaApp.dataDirectory);
+    File directory = new File(MentalHealthLiberiaApp.getApplication().getDataDirectory());
     if (directory.isDirectory()) {
-        File[] files = directory.listFiles();
-        for (int i = 0; i < files.length; i++) {
-            sendFile(files[i]);
+        
+        try {
+            // assemble data
+            String charset = "UTF-8";
+            String query = String.format("username=%s&password=%s", URLEncoder.encode(username, charset), URLEncoder.encode(password, charset));
+            System.out.println("Logging in with: " + query);
+            
+            // Send data
+            URL url = new URL(MentalHealthLiberiaApp.getApplication().getAuthenticationSocket());
+            HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+            conn.setDoOutput(true);
+            OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+            wr.write(query);
+            wr.flush();
+            
+            // Get the response
+            BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String line;
+            while ((line = rd.readLine()) != null) {
+               System.err.println(line);
+            }
+            wr.close();
+            rd.close();
+            
+            uploadFiles(directory, username, password);
+            
+        } catch (Exception e) {
+            System.err.println("Error occured while transmitting data.\n" +
+                    "Please contact a system administrator.");
+            System.err.println(e.getMessage());
+            e.printStackTrace();
+        }
+        
+    }
+}
+
+private void uploadFiles(File directory, String username, String password) {
+    File[] files = directory.listFiles();
+    for (int i = 0; i < files.length; i++) {
+        
+        // upload pending file
+        if (sendFile(files[i], username, password)) {
+            // delete pending file
+            files[i].delete();
         }
     }
-}//GEN-LAST:event_uploadMenuItemActionPerformed
+}
 
 private void clearField(Object field) {
     if (field instanceof JTextField) {
@@ -1969,20 +1951,25 @@ private void newMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     
     System.out.println("Clearing form");
     
+    // reset patient ID
+    this.patientID.setText("Not generated");
+    
     // Basic Information
     clearField(this.dateOfService);
     clearField(this.clinicianID);
-    clearField(this.patientID);
     clearField(this.locationOfService);
     clearField(this.reasonForVisit);
     clearField(this.clinicianTrainingLevel);
     clearField(this.referralSource);
     
+    // Patient Demographics (used to generate unique ID)
+    this.gender = "";
+    this.fathersName = "";
+    this.placeOfBirth = "";
+    this.dateOfBirth = "";
+    this.patientName = "";
+    
     // Patient Demographics
-    clearField(this.dateOfBirth);
-    clearField(this.genderGroup);
-    clearField(this.fathersName);
-    clearField(this.placeOfBirth);
     clearField(this.age);
     clearField(this.countyOfResidence);
     clearField(this.distanceTraveled);
@@ -2067,7 +2054,6 @@ private void newMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     private javax.swing.JRadioButton counseling4;
     private javax.swing.ButtonGroup counselingGroup;
     private javax.swing.JComboBox countyOfResidence;
-    private javax.swing.JTextField dateOfBirth;
     private javax.swing.JTextField dateOfService;
     private javax.swing.JCheckBox depakote;
     private javax.swing.JCheckBox depakoteAntiepiletic;
@@ -2084,7 +2070,6 @@ private void newMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     private javax.swing.JList epilepsy;
     private javax.swing.JCheckBox escitalopram;
     private javax.swing.JList familyPsychoEducation;
-    private javax.swing.JTextField fathersName;
     private javax.swing.JCheckBox fluoxetine;
     private javax.swing.JCheckBox fluphenazine;
     private javax.swing.JCheckBox fluphenazineDecanoateInjection;
@@ -2095,9 +2080,6 @@ private void newMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     private javax.swing.ButtonGroup followupCareCounselingGroup;
     private javax.swing.ButtonGroup followupCareMedicationsGroup;
     private javax.swing.JTextField gaf;
-    private javax.swing.JRadioButton gender1;
-    private javax.swing.JRadioButton gender2;
-    private javax.swing.ButtonGroup genderGroup;
     private javax.swing.JCheckBox haloperidal;
     private javax.swing.JCheckBox haloperidalDecanoatInjection;
     private javax.swing.JCheckBox imipramine;
@@ -2105,11 +2087,6 @@ private void newMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -2117,7 +2094,6 @@ private void newMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -2171,7 +2147,6 @@ private void newMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JCheckBox lithium;
@@ -2196,7 +2171,6 @@ private void newMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     private javax.swing.JCheckBox phenobarbital;
     private javax.swing.JCheckBox phenytoin;
     private javax.swing.JTextField phq;
-    private javax.swing.JTextField placeOfBirth;
     private javax.swing.JProgressBar progressBar;
     private javax.swing.JList psychoticDisorder;
     private javax.swing.ButtonGroup reasonForVisit;
@@ -2232,4 +2206,5 @@ private void newMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
 
     private JDialog aboutBox;
     private JDialog generatePatientIDBox;
+    private JDialog uploadFormsBox;
 }
