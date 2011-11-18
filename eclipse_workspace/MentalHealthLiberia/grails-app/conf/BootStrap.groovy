@@ -18,7 +18,7 @@ class BootStrap {
 		adminUser.save()
 		
 		def analystRole = new ShiroRole(name: "analyst")
-		analystRole.addToPermissions("patientEncounterForm:show,list")
+		analystRole.addToPermissions("patientEncounterForm:show,list,analyze")
 		analystRole.addToPermissions("searchable:*")
 		analystRole.save()
 		
@@ -27,7 +27,7 @@ class BootStrap {
 		analystUser.save()
 		
 		def clinicianRole = new ShiroRole(name: "clinician")
-		clinicianRole.addToPermissions("patientEncounterForm:show,list,upload") // also allow form upload
+		clinicianRole.addToPermissions("patientEncounterForm:show,list,upload,download") // also allow form upload and client download
 		clinicianRole.addToPermissions("searchable:*")
 		clinicianRole.save()
 		

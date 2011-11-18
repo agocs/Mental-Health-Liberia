@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
 <installs>
+<install is-default="false">
+<home>/home/greg/springsource/grails-1.3.7/</home>
+<name>Grails 1.3.7 (1)</name>
+</install>
 <install is-default="true">
 <home>/usr/local/grails-1.3.7/</home>
 <name>Grails 1.3.7</name>

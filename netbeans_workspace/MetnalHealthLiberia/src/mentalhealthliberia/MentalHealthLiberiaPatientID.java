@@ -42,7 +42,6 @@ public class MentalHealthLiberiaPatientID extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         patientsName = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        dateOfBirth = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         placeOfBirth = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -57,6 +56,7 @@ public class MentalHealthLiberiaPatientID extends javax.swing.JDialog {
         male = new javax.swing.JRadioButton();
         female = new javax.swing.JRadioButton();
         jLabel12 = new javax.swing.JLabel();
+        dateOfBirth = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setName("Form"); // NOI18N
@@ -94,14 +94,6 @@ public class MentalHealthLiberiaPatientID extends javax.swing.JDialog {
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         getContentPane().add(jLabel3, gridBagConstraints);
-
-        dateOfBirth.setText(resourceMap.getString("patientBirthDate.text")); // NOI18N
-        dateOfBirth.setName("patientBirthDate"); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        getContentPane().add(dateOfBirth, gridBagConstraints);
 
         jLabel4.setText(resourceMap.getString("jLabel4.text")); // NOI18N
         jLabel4.setName("jLabel4"); // NOI18N
@@ -231,6 +223,15 @@ public class MentalHealthLiberiaPatientID extends javax.swing.JDialog {
         gridBagConstraints.gridwidth = 2;
         getContentPane().add(jLabel12, gridBagConstraints);
 
+        dateOfBirth.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("M/d/yyyy"))));
+        dateOfBirth.setText(resourceMap.getString("dateOfBirth.text")); // NOI18N
+        dateOfBirth.setName("dateOfBirth"); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        getContentPane().add(dateOfBirth, gridBagConstraints);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -259,7 +260,7 @@ private void maleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:ev
     private MentalHealthLiberiaView view;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField dateOfBirth;
+    private javax.swing.JFormattedTextField dateOfBirth;
     private javax.swing.JTextField fathersName;
     private javax.swing.JRadioButton female;
     private javax.swing.ButtonGroup genderGroup;
