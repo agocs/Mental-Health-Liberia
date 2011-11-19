@@ -1426,7 +1426,7 @@ public class MentalHealthLiberiaView extends FrameView {
         jScrollPane8.setName("jScrollPane8"); // NOI18N
 
         anxietyDisorder.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Generalized anxiety disorder", "Panic disorder with agoraphobia", "Panic disorder without agoraphobia", "Agoraphobia without history of panic disorder", "Specific phobia", "Social phobia", "Obsessive compulsize disorder", "Post-traumatic stress disorder", "Acute stress", "Anxiety disorder due to general medical condition", "Anxiety disorder due to specific medical condition", "Anxiety disorder NOS" };
+            String[] strings = { "Generalized anxiety disorder", "Panic disorder with agoraphobia", "Panic disorder without agoraphobia", "Agoraphobia without history of panic disorder", "Specific phobia", "Social phobia", "Obsessive compulsive disorder", "Post-traumatic stress disorder", "Acute stress", "Anxiety disorder due to general medical condition", "Anxiety disorder due to specific medical condition", "Anxiety disorder NOS" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
@@ -1875,18 +1875,75 @@ private void loadFormValues(PatientEncounterForm formData) {
                         "Moderate",
                         "Severe without psychotic features",
                         "Severe with psychotic features"}));
-    
-    
-    // Diagnosis
-    formData.setMoodDisorder(extractValue(this.moodDisorder));
-    formData.setAnxietyDisorder(extractValue(this.anxietyDisorder));
-    formData.setPsychoticDisorder(extractValue(this.psychoticDisorder));
-    formData.setSomatoformDisorder(extractValue(this.somatoformDisorder));
-    formData.setSubstanceAbuseDisorder(extractValue(this.substanceAbuseDisorder));
-    formData.setSubstanceAbuseDisorder2(extractValue(this.substanceAbuseDisorder2));
-    formData.setEpilepsy(extractValue(this.epilepsy));
-    formData.setOtherMedicalCondition(extractValue(this.otherMedicalCondition));
-    formData.setSecondaryDiagnosis(extractValue(this.secondaryDiagnosis));
+    this.anxietyDisorder.setSelectedIndices(
+            convertStringToIntArray(
+                    formData.getDiagnosisPrimary(),
+                    new String[] {
+                        "Generalized anxiety disorder",
+                        "Panic disorder with agoraphobia",
+                        "Panic disorder without agoraphobia",
+                        "Agoraphobia without history of panic disorder",
+                        "Specific phobia",
+                        "Social phobia",
+                        "Obsessive compulsive disorder",
+                        "Post-traumatic stress disorder",
+                        "Acute stress",
+                        "Anxiety disorder due to general medical condition",
+                        "Anxiety disorder due to specific medical condition",
+                        "Anxiety disoder due to NOS"}));
+    this.psychoticDisorder.setSelectedIndices(
+            convertStringToIntArray(
+                    formData.getDiagnosisPrimary(),
+                    new String[] {
+                        "Schizophrenia catatonic type",
+                        "Schizophrenia disorganized type",
+                        "Schizophrenia paranoid type",
+                        "Schizophrenia residual type",
+                        "Schizophrenia undifferentiated type",
+                        "Schizoaffective disorder",
+                        "Psychotic disorder due to medical condition with delusions",
+                        "Psychotic disorder due to medical condition with hallucinations",
+                        "Psychotic disorder NOS"}));
+    this.somatoformDisorder.setSelectedIndices(
+            convertStringToIntArray(
+                    formData.getDiagnosisPrimary(),
+                    new String[] {
+                        "Somatization disorder",
+                        "Undifferentiated somatoform disorder",
+                        "Conversion disorder",
+                        "Pain disorder with both psychological factors and general medical condition",
+                        "Pain disorder with psychological factors",
+                        "Hypochondriasis",
+                        "Body dysmorphic disorder",
+                        "Somatoform disorder NOS"}));
+    this.substanceAbuseDisorder.setSelectedIndices(
+            convertStringToIntArray(
+                    formData.getDiagnosisPrimary(),
+                    new String[] {
+                        "Alcohol-related disorder",
+                        "Cannabis",
+                        "Cocaine",
+                        "Nicotine dependence",
+                        "Opioid",
+                        "Sedative-, hypnotic-, or anxiolytic"}));
+    this.substanceAbuseDisorder2.setSelectedIndices(
+            convertStringToIntArray(
+                    formData.getDiagnosisPrimary(),
+                    new String[] {
+                        "-induced mood disorder",
+                        "-induced psychotic disorder with delusions",
+                        "-induced psychotic disorder with hallucinations",
+                        "Intoxication",
+                        "Withdrawal"}));
+    this.epilepsy.setSelectedIndices(
+            convertStringToIntArray(
+                    formData.getDiagnosisPrimary(),
+                    new String[] {
+                        "With grand mal seizure",
+                        "With petit mal seizure",
+                        "Without seizure"}));
+    this.otherMedicalCondition.setText(formData.getOtherMedicalCondition());
+    this.secondaryDiagnosis.setText(formData.getSecondaryDiagnosis());
     
     // Treatment
     formData.setFluoxetine(extractBoolean(this.fluoxetine));
