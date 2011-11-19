@@ -4,6 +4,7 @@
 
 package mentalhealthliberia;
 
+import flexjson.JSONDeserializer;
 import flexjson.JSONSerializer;
 import java.io.IOException;
 import org.jdesktop.application.Action;
@@ -17,21 +18,27 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Enumeration;
+import java.util.List;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
+import javax.swing.ButtonModel;
+import javax.swing.DefaultButtonModel;
 import javax.swing.Timer;
 import javax.swing.Icon;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
@@ -1729,8 +1736,197 @@ public void setPatientsName(String patientName) {
     this.patientName = patientName;
 }
 
+public void patientIDNotGenerated() {
+    this.patientID.setText("Not generated");
+}
+
 public void patientIDGenerated() {
     this.patientID.setText("Generated");
+}
+
+private boolean fieldIsCompleted(String val) {
+    if (val == null || val.equals("")) {
+        return false;
+    }
+    return true;
+}
+
+private int[] convertToIntArray(List<Integer> list) {
+    if (list == null) {
+        return new int[0];
+    } else {
+        int[] ints = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            ints[i] = list.get(i);
+        }
+        return ints;
+    }
+}
+
+private int[] convertStringToIntArray(String csv, String[] values) {
+    if (fieldIsCompleted(csv)) {
+        List<Integer> indicies = new ArrayList<Integer>();
+        String[] strings = csv.split("[,]");
+        for (int i = 0; i < strings.length; i++) {
+            for (int j = 0; j < values.length; j++) {
+                if (strings[i].equals(values[j])) {
+                    indicies.add(j);
+                }
+            }
+        }
+        return convertToIntArray(indicies);
+    } else {
+        return new int[0];
+    }
+}
+
+private void loadFormValues(PatientEncounterForm formData) {
+    
+    // Basic Information
+    this.dateOfService.setText(formData.getDateOfService());
+    this.clinicianID.setText(formData.getClinicianID());
+    this.locationOfService.setText(formData.getLocationOfService());
+    this.reasonForVisit1.setSelected(false);
+    this.reasonForVisit2.setSelected(false);
+    if (formData.getReasonForVisit() != null &&
+        formData.getReasonForVisit().equals("Seeking mental health care")) {
+        this.reasonForVisit1.setSelected(true);
+    } else {
+        this.reasonForVisit2.setSelected(true);
+    }
+    this.clinicianTrainingLevel.setSelectedValue(formData.getClinicianTrainingLevel(), true);
+    this.referralSource.setSelectedValue(formData.getReferralSource(), true);
+    
+    /* TODO: may not need the following
+    if (fieldIsCompleted(formData.getClinicianTrainingLevel())) {
+        String val = formData.getClinicianTrainingLevel();
+        if (val.equalsIgnoreCase("No formal training")) {
+            this.clinicianTrainingLevel.setSelectedIndex(0);
+        } else if (val.equalsIgnoreCase("Community health worker training")) {
+            this.clinicianTrainingLevel.setSelectedIndex(1);
+        } else if (val.equalsIgnoreCase("Physician's assistant training")) {
+            this.clinicianTrainingLevel.setSelectedIndex(2);
+        } else if (val.equalsIgnoreCase("General nursing training")) {
+            this.clinicianTrainingLevel.setSelectedIndex(3);
+        } else if (val.equalsIgnoreCase("Psychiatric nurse training")) {
+            this.clinicianTrainingLevel.setSelectedIndex(4);
+        } else if (val.equalsIgnoreCase("Other")) {
+            this.clinicianTrainingLevel.setSelectedIndex(5);
+        }
+    }
+    if (fieldIsCompleted(formData.getReferralSource())) {
+        String val = formData.getReferralSource();
+        if (val.equalsIgnoreCase("Clinician")) {
+            this.referralSource.setSelectedIndex(0);
+        } else if (val.equalsIgnoreCase("Messages (radio, etc)")) {
+            this.referralSource.setSelectedIndex(1);
+        } else if (val.equalsIgnoreCase("Other")) {
+            this.referralSource.setSelectedIndex(2);
+        }
+    }*/
+    
+    // Patient Demographics (used for generating unique ID)
+    if (!fieldIsCompleted(formData.getPatientName()) ||
+        !fieldIsCompleted(formData.getDateOfBirth()) ||
+        !fieldIsCompleted(formData.getGender()) ||
+        !fieldIsCompleted(formData.getFathersName()) ||
+        !fieldIsCompleted(formData.getPlaceOfBirth())) {
+        patientIDNotGenerated();
+    } else {
+        this.patientName = formData.getPatientName();
+        this.dateOfBirth = formData.getDateOfBirth();
+        this.gender = formData.getGender();
+        this.fathersName = formData.getFathersName();
+        this.placeOfBirth = formData.getPlaceOfBirth();
+        patientIDGenerated();
+    }
+    
+    // Patient Demographics
+    this.age.setText(formData.getAge());
+    this.countyOfResidence.setSelectedItem(formData.getCountyOfResidence());
+    this.distanceTraveled.setText(formData.getDistanceTraveled());
+    this.employmentStatus.setSelectedValue(formData.getEmploymentStatus(), true);
+    this.maritalStatus.setSelectedValue(formData.getMaritalStatus(), true);
+    this.education.setSelectedValue(formData.getEducation(), true);
+    
+    // Symptoms and Functioning
+    this.phq.setText(formData.getPhq());
+    this.gaf.setText(formData.getGaf());
+    this.cage.setText(formData.getCage());
+    
+    // Diagnosis
+    this.diagnosisPrimary.setSelectedIndices(
+            convertStringToIntArray(
+                    formData.getDiagnosisPrimary(),
+                    new String[] {
+                        "Major depressive disorder, recurrent",
+                        "Bipolar disorder, most recent episode depressed",
+                        "Bipolar disorder, most recent episode manic",
+                        "Bipolar disorder, most recent episode mixed",
+                        "Mood disorder NOS",
+                        "Mood disorder due to medical condition"}));
+    this.moodDisorder.setSelectedIndices(
+            convertStringToIntArray(
+                    formData.getDiagnosisPrimary(),
+                    new String[] {
+                        "Full remission",
+                        "Partial remission",
+                        "Mild",
+                        "Moderate",
+                        "Severe without psychotic features",
+                        "Severe with psychotic features"}));
+    
+    
+    // Diagnosis
+    formData.setMoodDisorder(extractValue(this.moodDisorder));
+    formData.setAnxietyDisorder(extractValue(this.anxietyDisorder));
+    formData.setPsychoticDisorder(extractValue(this.psychoticDisorder));
+    formData.setSomatoformDisorder(extractValue(this.somatoformDisorder));
+    formData.setSubstanceAbuseDisorder(extractValue(this.substanceAbuseDisorder));
+    formData.setSubstanceAbuseDisorder2(extractValue(this.substanceAbuseDisorder2));
+    formData.setEpilepsy(extractValue(this.epilepsy));
+    formData.setOtherMedicalCondition(extractValue(this.otherMedicalCondition));
+    formData.setSecondaryDiagnosis(extractValue(this.secondaryDiagnosis));
+    
+    // Treatment
+    formData.setFluoxetine(extractBoolean(this.fluoxetine));
+    formData.setEscitalopram(extractBoolean(this.escitalopram));
+    formData.setSertraline(extractBoolean(this.sertraline));
+    formData.setAmitriptyline(extractBoolean(this.amitriptyline));
+    formData.setImipramine(extractBoolean(this.imipramine));
+    formData.setOtherAntidepressant(extractBoolean(this.otherAntidepressant));
+    formData.setHaloperidal(extractBoolean(this.haloperidal));
+    formData.setHaloperidalDecanoateInjection(extractBoolean(this.haloperidalDecanoatInjection));
+    formData.setChlorpromazine(extractBoolean(this.chlorpromazine));
+    formData.setFluphenazine(extractBoolean(this.fluphenazine));
+    formData.setFluphenazineDecanoateInjection(extractBoolean(this.fluphenazineDecanoateInjection));
+    formData.setRisperidone(extractBoolean(this.risperidone));
+    formData.setRisperidoneConstaInjection(extractBoolean(this.risperidoneConstaInjection));
+    formData.setOtherAntipsychotic(extractBoolean(this.otherAntipsychotic));
+    formData.setClomipramine(extractBoolean(this.clomipramine));
+    formData.setDiazepam(extractBoolean(this.diazepam));
+    formData.setLorazepam(extractBoolean(this.lorazepam));
+    formData.setOtherSedative(extractBoolean(this.otherSedative));
+    formData.setDepakote(extractBoolean(this.depakote));
+    formData.setLithium(extractBoolean(this.lithium));
+    formData.setCarbamazepine(extractBoolean(this.carbamazepine));
+    formData.setOtherMoodStabilizer(extractBoolean(this.otherMoodStabilizer));
+    formData.setDepakoteAntiepileptic(extractBoolean(this.depakoteAntiepiletic));
+    formData.setCarbmazepineAntiepileptic(extractBoolean(this.carbamazepineAntiepileptic));
+    formData.setPhenobarbital(extractBoolean(this.phenobarbital));
+    formData.setPhenytoin(extractBoolean(this.phenytoin));
+    formData.setOtherAntiepileptic(extractBoolean(this.otherAntiepileptic));
+    formData.setTrihexyphenidyl(extractBoolean(this.trihexyphenidyl));
+    formData.setOtherAnticholinergic(extractBoolean(this.otherAnticholinergic));
+    formData.setCounseling(extractValue(this.counselingGroup));
+    formData.setIndividualCounseling(extractValue(this.individualCounseling));
+    formData.setFamilyPsychoEducation(extractValue(this.familyPsychoEducation));
+    
+    // Discharge
+    formData.setFollowUpCareMedication(extractBoolean(this.followupCareMedicationsGroup));
+    formData.setFollowUpCareCounseling(extractBoolean(this.followupCareCounselingGroup));
+    formData.setDischargeDisposition(extractValue(this.dischargeDisposition));
+    formData.setReportData(extractBoolean(this.permissionToReportGroup));
 }
 
 private PatientEncounterForm buildForm() {
@@ -1841,19 +2037,16 @@ private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-
             
             JOptionPane.showMessageDialog(
                     this.getFrame(),
-                    "Form saved.",
-                    "Save Form",
-                    JOptionPane.PLAIN_MESSAGE);
+                    "Save successful.");
             
             clearForm();
             
         } catch (IOException e) {
-            
             JOptionPane.showMessageDialog(
                     this.getFrame(),
                     "An error occurred while saving the form, please try again or save to PDF.",
                     "Save Form",
-                    JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.ERROR_MESSAGE);
             
             System.err.println(e.getMessage());
             e.printStackTrace();
@@ -2108,7 +2301,40 @@ private void saveAsPdfMenuItemActionPerformed(java.awt.event.ActionEvent evt) {/
 }//GEN-LAST:event_saveAsPdfMenuItemActionPerformed
 
 private void browseFormsMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_browseFormsMenuItemActionPerformed
-// TODO add your handling code here:
+    JFileChooser fc = new JFileChooser();
+    
+    int returnValue = fc.showOpenDialog(this.getFrame());
+    if (returnValue == JFileChooser.APPROVE_OPTION) {
+        File file = fc.getSelectedFile();
+        
+        try {
+            String jsonString = "";
+            StringBuffer fileData = new StringBuffer(1000);
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            char[] buf = new char[1024];
+            int numRead=0;
+            while((numRead=reader.read(buf)) != -1){
+                fileData.append(buf, 0, numRead);
+            }
+            reader.close();
+            jsonString = fileData.toString();
+            
+            PatientEncounterForm form = new JSONDeserializer<PatientEncounterForm>()
+                    .deserialize(jsonString);
+            
+            loadFormValues(form);
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(
+                    this.getFrame(),
+                    "This file does not appear to be a valid MHL form, please try again.",
+                    "Open Form",
+                    JOptionPane.ERROR_MESSAGE);
+            
+            System.err.println(e.getMessage());
+            e.printStackTrace();
+        }
+    }
 }//GEN-LAST:event_browseFormsMenuItemActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

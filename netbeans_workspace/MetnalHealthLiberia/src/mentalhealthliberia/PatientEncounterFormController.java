@@ -432,6 +432,44 @@ public class PatientEncounterFormController {
         cell = new PdfPCell(new Phrase(formData.getAnxietyDisorder()));
         table.addCell(cell);
         
+        cell = new PdfPCell(new Phrase("Psychotic Disorder"));
+        table.addCell(cell);
+        cell = new PdfPCell(new Phrase(formData.getPsychoticDisorder()));
+        table.addCell(cell);
+        
+        // Row Three
+        cell = new PdfPCell(new Phrase("Somatoform Disorder"));
+        table.addCell(cell);
+        cell = new PdfPCell(new Phrase(formData.getSomatoformDisorder()));
+        table.addCell(cell);
+        
+        cell = new PdfPCell(new Phrase("Substance Abuse Disorder (first level choice)"));
+        table.addCell(cell);
+        cell = new PdfPCell(new Phrase(formData.getSubstanceAbuseDisorder()));
+        table.addCell(cell);
+        
+        // Row Four
+        cell = new PdfPCell(new Phrase("Substance Abuse Disorder (second level choice)"));
+        table.addCell(cell);
+        cell = new PdfPCell(new Phrase(formData.getSubstanceAbuseDisorder2()));
+        table.addCell(cell);
+        
+        cell = new PdfPCell(new Phrase("Epilepsy"));
+        table.addCell(cell);
+        cell = new PdfPCell(new Phrase(formData.getEpilepsy()));
+        table.addCell(cell);
+        
+        // Row Five
+        cell = new PdfPCell(new Phrase("Relevant Other Medical Conditions"));
+        table.addCell(cell);
+        cell = new PdfPCell(new Phrase(formData.getOtherMedicalCondition()));
+        table.addCell(cell);
+        
+        cell = new PdfPCell(new Phrase("Secondary/Tertiary Diagnosis"));
+        table.addCell(cell);
+        cell = new PdfPCell(new Phrase(formData.getSecondaryDiagnosis()));
+        table.addCell(cell);
+        
         return table;
     }
     
