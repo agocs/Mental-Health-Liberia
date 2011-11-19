@@ -5,36 +5,25 @@
 package mentalhealthliberia;
 
 import flexjson.JSONSerializer;
-import java.awt.Component;
 import java.io.IOException;
 import org.jdesktop.application.Action;
 import org.jdesktop.application.ResourceMap;
 import org.jdesktop.application.SingleFrameApplication;
 import org.jdesktop.application.FrameView;
-import org.jdesktop.application.Task;
 import org.jdesktop.application.TaskMonitor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.net.HttpURLConnection;
-import java.net.Socket;
 import java.net.URL;
-import java.net.URLConnection;
 import java.net.URLEncoder;
-import java.net.UnknownHostException;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Enumeration;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
@@ -45,6 +34,7 @@ import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -1956,6 +1946,8 @@ void performUpload(String username, String password) {
             String line;
             while ((line = rd.readLine()) != null) {
                System.err.println(line);
+               
+               // TODO: handle the error conditions
             }
             wr.close();
             rd.close();
@@ -1997,91 +1989,98 @@ private void clearField(Object field) {
 }
 
 private void newMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newMenuItemActionPerformed
-    // clears the form
+    // show confirmation dialog
+    int option = JOptionPane.showConfirmDialog(
+            this.getFrame(),
+            "Any un-saved information will be lost, continue?",
+            "New Form Confirmation",
+            JOptionPane.YES_NO_OPTION);
     
-    System.out.println("Clearing form");
-    
-    // reset patient ID
-    this.patientID.setText("Not generated");
-    
-    // Basic Information
-    clearField(this.dateOfService);
-    clearField(this.clinicianID);
-    clearField(this.locationOfService);
-    clearField(this.reasonForVisit);
-    clearField(this.clinicianTrainingLevel);
-    clearField(this.referralSource);
-    
-    // Patient Demographics (used to generate unique ID)
-    this.gender = "";
-    this.fathersName = "";
-    this.placeOfBirth = "";
-    this.dateOfBirth = "";
-    this.patientName = "";
-    
-    // Patient Demographics
-    clearField(this.age);
-    clearField(this.countyOfResidence);
-    clearField(this.distanceTraveled);
-    clearField(this.employmentStatus);
-    
-    // Symptoms and Functioning
-    clearField(this.phq);
-    clearField(this.gaf);
-    clearField(this.cage);
-    
-    // Diagnosis
-    clearField(this.diagnosisPrimary);
-    clearField(this.moodDisorder);
-    clearField(this.anxietyDisorder);
-    clearField(this.psychoticDisorder);
-    clearField(this.somatoformDisorder);
-    clearField(this.substanceAbuseDisorder);
-    clearField(this.substanceAbuseDisorder2);
-    clearField(this.epilepsy);
-    clearField(this.otherMedicalCondition);
-    clearField(this.secondaryDiagnosis);
-    
-    //  Treatment
-    clearField(this.fluoxetine);
-    clearField(this.escitalopram);
-    clearField(this.sertraline);
-    clearField(this.amitriptyline);
-    clearField(this.imipramine);
-    clearField(this.otherAntidepressant);
-    clearField(this.haloperidal);
-    clearField(this.haloperidalDecanoatInjection);
-    clearField(this.chlorpromazine);
-    clearField(this.fluphenazine);
-    clearField(this.fluphenazineDecanoateInjection);
-    clearField(this.risperidone);
-    clearField(this.risperidoneConstaInjection);
-    clearField(this.otherAntipsychotic);
-    clearField(this.clomipramine);
-    clearField(this.clonazepam);
-    clearField(this.diazepam);
-    clearField(this.lorazepam);
-    clearField(this.otherSedative);
-    clearField(this.depakote);
-    clearField(this.lithium);
-    clearField(this.carbamazepine);
-    clearField(this.otherMoodStabilizer);
-    clearField(this.depakoteAntiepiletic);
-    clearField(this.carbamazepineAntiepileptic);
-    clearField(this.phenobarbital);
-    clearField(this.phenytoin);
-    clearField(this.otherAntiepileptic);
-    clearField(this.trihexyphenidyl);
-    clearField(this.otherAnticholinergic);
-    clearField(this.counselingGroup);
-    clearField(this.individualCounseling);
-    clearField(this.familyPsychoEducation);
-    
-    // Discharge
-    clearField(this.followupCareMedicationsGroup);
-    clearField(this.followupCareCounselingGroup);
-    clearField(this.dischargeDisposition);
-    clearField(this.permissionToReportGroup);
+    if (option == JOptionPane.YES_OPTION) {
+        System.out.println("Clearing form");
+
+        // reset patient ID
+        this.patientID.setText("Not generated");
+
+        // Basic Information
+        clearField(this.dateOfService);
+        clearField(this.clinicianID);
+        clearField(this.locationOfService);
+        clearField(this.reasonForVisit);
+        clearField(this.clinicianTrainingLevel);
+        clearField(this.referralSource);
+
+        // Patient Demographics (used to generate unique ID)
+        this.gender = "";
+        this.fathersName = "";
+        this.placeOfBirth = "";
+        this.dateOfBirth = "";
+        this.patientName = "";
+
+        // Patient Demographics
+        clearField(this.age);
+        clearField(this.countyOfResidence);
+        clearField(this.distanceTraveled);
+        clearField(this.employmentStatus);
+
+        // Symptoms and Functioning
+        clearField(this.phq);
+        clearField(this.gaf);
+        clearField(this.cage);
+
+        // Diagnosis
+        clearField(this.diagnosisPrimary);
+        clearField(this.moodDisorder);
+        clearField(this.anxietyDisorder);
+        clearField(this.psychoticDisorder);
+        clearField(this.somatoformDisorder);
+        clearField(this.substanceAbuseDisorder);
+        clearField(this.substanceAbuseDisorder2);
+        clearField(this.epilepsy);
+        clearField(this.otherMedicalCondition);
+        clearField(this.secondaryDiagnosis);
+
+        //  Treatment
+        clearField(this.fluoxetine);
+        clearField(this.escitalopram);
+        clearField(this.sertraline);
+        clearField(this.amitriptyline);
+        clearField(this.imipramine);
+        clearField(this.otherAntidepressant);
+        clearField(this.haloperidal);
+        clearField(this.haloperidalDecanoatInjection);
+        clearField(this.chlorpromazine);
+        clearField(this.fluphenazine);
+        clearField(this.fluphenazineDecanoateInjection);
+        clearField(this.risperidone);
+        clearField(this.risperidoneConstaInjection);
+        clearField(this.otherAntipsychotic);
+        clearField(this.clomipramine);
+        clearField(this.clonazepam);
+        clearField(this.diazepam);
+        clearField(this.lorazepam);
+        clearField(this.otherSedative);
+        clearField(this.depakote);
+        clearField(this.lithium);
+        clearField(this.carbamazepine);
+        clearField(this.otherMoodStabilizer);
+        clearField(this.depakoteAntiepiletic);
+        clearField(this.carbamazepineAntiepileptic);
+        clearField(this.phenobarbital);
+        clearField(this.phenytoin);
+        clearField(this.otherAntiepileptic);
+        clearField(this.trihexyphenidyl);
+        clearField(this.otherAnticholinergic);
+        clearField(this.counselingGroup);
+        clearField(this.individualCounseling);
+        clearField(this.familyPsychoEducation);
+
+        // Discharge
+        clearField(this.followupCareMedicationsGroup);
+        clearField(this.followupCareCounselingGroup);
+        clearField(this.dischargeDisposition);
+        clearField(this.permissionToReportGroup);
+    }
 }//GEN-LAST:event_newMenuItemActionPerformed
 
 private void saveAsPdfMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveAsPdfMenuItemActionPerformed
