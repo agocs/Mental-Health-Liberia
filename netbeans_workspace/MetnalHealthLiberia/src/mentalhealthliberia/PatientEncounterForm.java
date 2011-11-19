@@ -547,7 +547,6 @@ public class PatientEncounterForm implements Serializable {
     public void setTrihexyphenidyl(boolean trihexyphenidyl) {
         this.trihexyphenidyl = trihexyphenidyl;
     }
-
     
     
     // Clinician Info
