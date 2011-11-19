@@ -1811,6 +1811,14 @@ private void loadFormValues(PatientEncounterForm formData) {
         } else if (val.equalsIgnoreCase("Psychiatric nurse training")) {
             this.clinicianTrainingLevel.setSelectedIndex(4);
         } else if (val.equalsIgnoreCase("Other")) {
+    this.reasonForVisit1.setSelected(false);
+    this.reasonForVisit2.setSelected(false);
+    if (formData.getReasonForVisit() != null &&
+        formData.getReasonForVisit().equals("Seeking mental health care")) {
+        this.reasonForVisit1.setSelected(true);
+    } else {
+        this.reasonForVisit2.setSelected(true);
+    }
             this.clinicianTrainingLevel.setSelectedIndex(5);
         }
     }
@@ -1832,6 +1840,14 @@ private void loadFormValues(PatientEncounterForm formData) {
         !fieldIsCompleted(formData.getFathersName()) ||
         !fieldIsCompleted(formData.getPlaceOfBirth())) {
         patientIDNotGenerated();
+    this.reasonForVisit1.setSelected(false);
+    this.reasonForVisit2.setSelected(false);
+    if (formData.getReasonForVisit() != null &&
+        formData.getReasonForVisit().equals("Seeking mental health care")) {
+        this.reasonForVisit1.setSelected(true);
+    } else {
+        this.reasonForVisit2.setSelected(true);
+    }
     } else {
         this.patientName = formData.getPatientName();
         this.dateOfBirth = formData.getDateOfBirth();
