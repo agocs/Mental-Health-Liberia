@@ -2084,7 +2084,7 @@ private void newMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
 }//GEN-LAST:event_newMenuItemActionPerformed
 
 private void saveAsPdfMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveAsPdfMenuItemActionPerformed
-    PatientEncounterFormController.getInstance().generatePdf(buildForm());
+    PatientEncounterFormController.getInstance().generatePdf(buildForm(), this.getFrame());
 }//GEN-LAST:event_saveAsPdfMenuItemActionPerformed
 
 private void browseFormsMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_browseFormsMenuItemActionPerformed

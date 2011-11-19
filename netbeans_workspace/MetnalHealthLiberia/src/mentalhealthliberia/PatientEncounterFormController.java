@@ -10,10 +10,12 @@ import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import java.io.File;
 import java.io.FileOutputStream;
-import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
 
 /**
  *
@@ -38,46 +40,49 @@ public class PatientEncounterFormController {
         // I'd say probably yes, should come back to this
     }
     
-    public void generatePdf(PatientEncounterForm formData) {
+    public void generatePdf(PatientEncounterForm formData, JFrame parent) {
         // where to store the file
-        // TODO: replace with file browser wizard
-        //String outputDirectory = MentalHealthLiberiaApp.getApplication().getDataDirectory();
-        String fileName = Math.abs((new SecureRandom()).nextInt()) + ".pdf";
+        final JFileChooser fc = new JFileChooser();
         
-        try {
-            // step 1
-            Document document = new Document(PageSize.LETTER);
-            
-            // step 2
-            PdfWriter.getInstance(document, new FileOutputStream(fileName));
-            
-            // step 3
-            document.open();
-            
-            // step 4
-            document.add(new Phrase("Basic Information"));
-            document.add(createBasicInformationTable(formData));
-            document.add(new Phrase(""));
-            document.add(new Phrase("Patient Demographics"));
-            document.add(createPatientDemographicsTable(formData));
-            document.add(new Phrase(""));
-            document.add(new Phrase("Symptoms and Functioning"));
-            document.add(createSymptomsTable(formData));
-            document.add(new Phrase(""));
-            document.add(new Phrase("Treatment"));
-            document.add(createTreatmentTable(formData));
-            document.add(new Phrase(""));
-            document.add(new Phrase("Discharge"));
-            document.add(createDischargeTable(formData));
-            document.add(new Phrase(""));
-            document.add(new Phrase("Diagnosis"));
-            document.add(createDiagnosisTable(formData));
-            
-            // step 5
-            document.close();
-            
-        } catch (Exception e) {
-            e.printStackTrace();
+        int returnValue = fc.showOpenDialog(parent);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File file = fc.getSelectedFile();
+        
+            try {
+                // step 1
+                Document document = new Document(PageSize.LETTER);
+
+                // step 2
+                PdfWriter.getInstance(document, new FileOutputStream(file));
+
+                // step 3
+                document.open();
+
+                // step 4
+                document.add(new Phrase("Basic Information"));
+                document.add(createBasicInformationTable(formData));
+                document.add(new Phrase(""));
+                document.add(new Phrase("Patient Demographics"));
+                document.add(createPatientDemographicsTable(formData));
+                document.add(new Phrase(""));
+                document.add(new Phrase("Symptoms and Functioning"));
+                document.add(createSymptomsTable(formData));
+                document.add(new Phrase(""));
+                document.add(new Phrase("Treatment"));
+                document.add(createTreatmentTable(formData));
+                document.add(new Phrase(""));
+                document.add(new Phrase("Discharge"));
+                document.add(createDischargeTable(formData));
+                document.add(new Phrase(""));
+                document.add(new Phrase("Diagnosis"));
+                document.add(createDiagnosisTable(formData));
+
+                // step 5
+                document.close();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
     
