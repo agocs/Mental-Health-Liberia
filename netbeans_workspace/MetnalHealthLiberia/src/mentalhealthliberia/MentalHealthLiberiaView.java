@@ -1997,11 +1997,35 @@ private void loadFormValues(PatientEncounterForm formData) {
     this.trihexyphenidyl.setSelected(formData.isTrihexyphenidyl());
     this.otherAnticholinergic.setSelected(formData.isOtherAnticholinergic());
     
+    this.counseling1.setSelected(false);
+    this.counseling2.setSelected(false);
+    this.counseling3.setSelected(false);
+    this.counseling4.setSelected(false);
+    if (fieldIsCompleted(formData.getCounseling())) {
+        if (formData.getCounseling().equalsIgnoreCase("Individual counseling")) {
+            this.counseling1.setSelected(true);
+        } else if (formData.getCounseling().equalsIgnoreCase("Group counseling")) {
+            this.counseling2.setSelected(true);
+        } else if (formData.getCounseling().equalsIgnoreCase("Family psycho-education")) {
+            this.counseling3.setSelected(true);
+        } else if (formData.getCounseling().equalsIgnoreCase("Family therapy")) {
+            this.counseling4.setSelected(true);
+        }
+    }
     
-    
-    formData.setCounseling(extractValue(this.counselingGroup));
-    formData.setIndividualCounseling(extractValue(this.individualCounseling));
-    formData.setFamilyPsychoEducation(extractValue(this.familyPsychoEducation));
+    this.individualCounseling.setSelectedIndices(
+            convertStringToIntArray(
+                    formData.getDiagnosisPrimary(),
+                    new String[] {
+                        "CBT",
+                        "DBT",
+                        "Motivational interviewing"}));
+    this.familyPsychoEducation.setSelectedIndices(
+            convertStringToIntArray(
+                    formData.getDiagnosisPrimary(),
+                    new String[] {
+                        "Support group",
+                        "Other"}));
     
     // Discharge
     formData.setFollowUpCareMedication(extractBoolean(this.followupCareMedicationsGroup));
