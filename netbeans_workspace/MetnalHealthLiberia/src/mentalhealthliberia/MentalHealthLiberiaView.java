@@ -2028,10 +2028,29 @@ private void loadFormValues(PatientEncounterForm formData) {
                         "Other"}));
     
     // Discharge
-    formData.setFollowUpCareMedication(extractBoolean(this.followupCareMedicationsGroup));
-    formData.setFollowUpCareCounseling(extractBoolean(this.followupCareCounselingGroup));
-    formData.setDischargeDisposition(extractValue(this.dischargeDisposition));
-    formData.setReportData(extractBoolean(this.permissionToReportGroup));
+    this.followUpCareMedication1.setSelected(false);
+    this.followUpCareMedication2.setSelected(false);
+    if (formData.isFollowUpCareMedication()) {
+        this.followUpCareMedication1.setSelected(true);
+    } else {
+        this.followUpCareMedication2.setSelected(true);
+    }
+    this.followUpCareCounseling1.setSelected(false);
+    this.followUpCareCounseling2.setSelected(false);
+    if (formData.isFollowUpCareCounseling()) {
+        this.followUpCareCounseling1.setSelected(true);
+    } else {
+        this.followUpCareCounseling2.setSelected(true);
+    }
+    this.dischargeDisposition.setSelectedValue(formData.getDischargeDisposition(), true);
+    
+    this.reportData1.setSelected(false);
+    this.reportData2.setSelected(false);
+    if (formData.isReportData()) {
+        this.reportData1.setSelected(true);
+    } else {
+        this.reportData2.setSelected(true);
+    }
 }
 
 private PatientEncounterForm buildForm() {
