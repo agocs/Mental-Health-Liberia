@@ -109,8 +109,7 @@ class PatientEncounterFormController {
     }
 	
 	def upload = {
-		println "upload fired";
-		
+		log.info "upload fired"
 		if (request.method == "POST") {
 			println params.data;
 	
@@ -227,6 +226,49 @@ class PatientEncounterFormController {
 	}
 	
 	def download = {
+		byte[] latestClient = fetchLatestClient()
+		response.contentType = "application/octet-stream"
+		response.setHeader("Content-disposition", "attachment; filename=MHL-Client.zip")
+		response.outputStream << latestClient
+	}
+	
+	private byte[] fetchLatestClient() {
+		File file = new File("/var/lib/tomcat6/data/dist.zip")
+		InputStream is = new FileInputStream(file)
+		long length = file.length()
 		
+		byte[] bytes = new byte[(int)length];
+		
+		// Read in the bytes
+		int offset = 0;
+		int numRead = 0;
+		while (offset < bytes.length
+			   && (numRead=is.read(bytes, offset, bytes.length-offset)) >= 0) {
+			offset += numRead;
+		}
+	
+		// Ensure all the bytes have been read in
+		if (offset < bytes.length) {
+			log.error "Could not completely read file " + file.getName();
+		}
+	
+		// Close the input stream and return bytes
+		is.close();
+		return bytes;
+	}
+	
+	def uploadLatestClient = {
+		def uploadedFile = request.getFile('payload')
+		if (!uploadedFile.empty) {
+			File file = new File("data/dist.zip")
+			if (file.exists()) {
+				file.delete()
+			}
+			uploadedFile.transferTo(new File("/var/lib/tomcat6/data/dist.zip"))
+			flash.message = "File uploaded successfully"
+		} else {
+			flash.message = "File upload failed"
+		}
+		redirect(action: "list")
 	}
 }

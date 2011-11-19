@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="edu.gatech.mentalhealthliberia.PatientEncounterForm"/>
+<fullyQualifiedTypeName name="groovy.lang.Tuple"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="org.apache.shiro.crypto.hash.Sha512Hash"/>
+<fullyQualifiedTypeName name="org.apache.shiro.crypto.hash.Sha256Hash"/>
 </qualifiedTypeNameHistroy>

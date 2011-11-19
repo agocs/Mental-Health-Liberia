@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
+            <span class="menuButton"><a class="home" href="${createLink(controller: 'patientEncounterForm', action: 'list')}"><g:message code="default.home.label"/></a></span>
             <span class="menuButton"><g:link class="create" controller="searchable">Search patient encounter forms</g:link></span>
             <g:if test="${SecurityUtils.subject.hasRole('admin') || SecurityUtils.subject.hasRole('analyst')}">
             <span class="menuButton"><g:link class="create" action="analyze">Generate Reports</g:link></span>
@@ -29,7 +29,7 @@
                     <thead>
                         <tr>
                         
-                            <g:sortableColumn property="patientID" title="${message(code: 'patientEncounterForm.id.label', default: 'Form ID')}" />
+                            <g:sortableColumn property="id" title="${message(code: 'patientEncounterForm.id.label', default: 'Form ID')}" />
                         
                             <g:sortableColumn property="clinicianID" title="${message(code: 'patientEncounterForm.clinicianID.label', default: 'Clinician ID')}" />
                         
@@ -60,5 +60,28 @@
                 <g:paginate total="${patientEncounterFormInstanceTotal}" />
             </div>
         </div>
+        <shiro:hasRole name="admin">
+        <div class="dialog" style="float: right;">
+            <h1>Upload Latest Client</h1>
+        	<g:uploadForm action="uploadLatestClient" method="post" >
+        	<table>
+			  <tr class="prop">
+			    <td valign="top" class="name">
+			      <label for="payload">Latest Client:</label>
+			    </td>
+			    <td valign="top">
+			      <input type="file" id="payload" name="payload"/>
+			    </td>
+			  </tr>
+			</table>
+                <div class="buttons">
+					<span class="button"><input class="edit" type="submit" value="Upload"></input></span>
+                    <span class="button"><input class="edit" onclick="window.location='${createLink(controller:'shiroUser', action:'list')}'" value="Edit Users"></input></span>
+                </div>
+			</g:uploadForm>
+			<div class="dialog">
+			</div>
+        </div>
+        </shiro:hasRole>
     </body>
 </html>
