@@ -1946,35 +1946,43 @@ private void loadFormValues(PatientEncounterForm formData) {
     this.secondaryDiagnosis.setText(formData.getSecondaryDiagnosis());
     
     // Treatment
-    formData.setFluoxetine(extractBoolean(this.fluoxetine));
-    formData.setEscitalopram(extractBoolean(this.escitalopram));
-    formData.setSertraline(extractBoolean(this.sertraline));
-    formData.setAmitriptyline(extractBoolean(this.amitriptyline));
-    formData.setImipramine(extractBoolean(this.imipramine));
-    formData.setOtherAntidepressant(extractBoolean(this.otherAntidepressant));
-    formData.setHaloperidal(extractBoolean(this.haloperidal));
-    formData.setHaloperidalDecanoateInjection(extractBoolean(this.haloperidalDecanoatInjection));
-    formData.setChlorpromazine(extractBoolean(this.chlorpromazine));
-    formData.setFluphenazine(extractBoolean(this.fluphenazine));
-    formData.setFluphenazineDecanoateInjection(extractBoolean(this.fluphenazineDecanoateInjection));
-    formData.setRisperidone(extractBoolean(this.risperidone));
-    formData.setRisperidoneConstaInjection(extractBoolean(this.risperidoneConstaInjection));
-    formData.setOtherAntipsychotic(extractBoolean(this.otherAntipsychotic));
-    formData.setClomipramine(extractBoolean(this.clomipramine));
-    formData.setDiazepam(extractBoolean(this.diazepam));
-    formData.setLorazepam(extractBoolean(this.lorazepam));
-    formData.setOtherSedative(extractBoolean(this.otherSedative));
-    formData.setDepakote(extractBoolean(this.depakote));
-    formData.setLithium(extractBoolean(this.lithium));
-    formData.setCarbamazepine(extractBoolean(this.carbamazepine));
-    formData.setOtherMoodStabilizer(extractBoolean(this.otherMoodStabilizer));
-    formData.setDepakoteAntiepileptic(extractBoolean(this.depakoteAntiepiletic));
-    formData.setCarbmazepineAntiepileptic(extractBoolean(this.carbamazepineAntiepileptic));
-    formData.setPhenobarbital(extractBoolean(this.phenobarbital));
-    formData.setPhenytoin(extractBoolean(this.phenytoin));
-    formData.setOtherAntiepileptic(extractBoolean(this.otherAntiepileptic));
-    formData.setTrihexyphenidyl(extractBoolean(this.trihexyphenidyl));
-    formData.setOtherAnticholinergic(extractBoolean(this.otherAnticholinergic));
+    this.fluoxetine.setSelected(formData.isFluoxetine());
+    this.escitalopram.setSelected(formData.isEscitalopram());
+    this.sertraline.setSelected(formData.isSertraline());
+    this.amitriptyline.setSelected(formData.isAmitriptyline());
+    this.imipramine.setSelected(formData.isImipramine());
+    this.otherAntidepressant.setSelected(formData.isOtherAntidepressant());
+    this.haloperidal.setSelected(formData.isHaloperidal());
+    this.haloperidalDecanoatInjection.setSelected(formData.isHaloperidalDecanoateInjection());
+    this.chlorpromazine.setSelected(formData.isChlorpromazine());
+    this.fluphenazine.setSelected(formData.isFluphenazine());
+    this.fluphenazineDecanoateInjection.setSelected(formData.isFluphenazineDecanoateInjection());
+    this.risperidone.setSelected(formData.isRisperidone());
+    this.risperidoneConstaInjection.setSelected(formData.isRisperidoneConstaInjection());
+    this.otherAntipsychotic.setSelected(formData.isOtherAntipsychotic());
+    
+    this.clomipramine.setSelected(formData.isClomipramine());
+    this.clonazepam.setSelected(formData.isClonazepam());
+    this.diazepam.setSelected(formData.isDiazepam());
+    this.lorazepam.setSelected(formData.isLorazepam());
+    this.otherSedative.setSelected(formData.isOtherSedative());
+    
+    this.depakote.setSelected(formData.isDepakote());
+    this.lithium.setSelected(formData.isLithium());
+    this.carbamazepine.setSelected(formData.isCarbamazepine());
+    this.otherMoodStabilizer.setSelected(formData.isOtherMoodStabilizer());
+    
+    this.depakoteAntiepiletic.setSelected(formData.isDepakoteAntiepileptic());
+    this.carbamazepineAntiepileptic.setSelected(formData.isCarbmazepineAntiepileptic());
+    this.phenobarbital.setSelected(formData.isPhenobarbital());
+    this.phenytoin.setSelected(formData.isPhenytoin());
+    this.otherAntiepileptic.setSelected(formData.isOtherAntiepileptic());
+    
+    this.trihexyphenidyl.setSelected(formData.isTrihexyphenidyl());
+    this.otherAnticholinergic.setSelected(formData.isOtherAnticholinergic());
+    
+    
+    
     formData.setCounseling(extractValue(this.counselingGroup));
     formData.setIndividualCounseling(extractValue(this.individualCounseling));
     formData.setFamilyPsychoEducation(extractValue(this.familyPsychoEducation));
