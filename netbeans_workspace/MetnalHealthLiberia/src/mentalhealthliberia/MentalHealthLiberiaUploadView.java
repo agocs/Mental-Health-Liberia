@@ -113,7 +113,7 @@ public class MentalHealthLiberiaUploadView extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
 private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    this.form.performUpload(this.clinicianID.getText(), new String(this.password.getPassword()));
+    // TODO: get rid of this function somehow, it's tied to the WYSIWYG editor
 }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

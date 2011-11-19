@@ -4,6 +4,9 @@
 
 package mentalhealthliberia;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
 
@@ -12,20 +15,38 @@ import org.jdesktop.application.SingleFrameApplication;
  */
 public class MentalHealthLiberiaApp extends SingleFrameApplication {
 
-    private String dataDirectory = "/home/greg/mentalHealthLiberiaData/";
-    private String dataSocket = "http://localhost:8081/MentalHealthLiberia/patientEncounterForm/upload";
-    private String authenticationSocket = "http://localhost:8081/MentalHealthLiberia/auth/uploadAuthenticate";
+    private static String uploadUrl = "http://50.57.158.90:8080/MHL/patientEncounterForm/upload";
+    private static String dataDirectory = "";
+    
+    private static boolean processConfig() {
+        try {
+            File file = new File("app.properties");
+            StringBuffer fileData = new StringBuffer(1000);
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            char[] buf = new char[1024];
+            int numRead=0;
+            while((numRead=reader.read(buf)) != -1) {
+                fileData.append(buf, 0, numRead);
+            }
+            reader.close();
+            dataDirectory = fileData.toString();
+            File dataDir = new File(dataDirectory);
+            if (!dataDir.exists()) {
+                dataDir.mkdir();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
     
     public String getDataDirectory() {
-        return this.dataDirectory;
+        return dataDirectory;
     }
     
-    public String getDataSocket() {
-        return this.dataSocket;
-    }
-    
-    public String getAuthenticationSocket() {
-        return this.authenticationSocket;
+    public String getUploadUrl() {
+        return uploadUrl;
     }
     
     /**
@@ -55,6 +76,8 @@ public class MentalHealthLiberiaApp extends SingleFrameApplication {
      * Main method launching the application.
      */
     public static void main(String[] args) {
-        launch(MentalHealthLiberiaApp.class, args);
+        if (processConfig()) {
+            launch(MentalHealthLiberiaApp.class, args);
+        }
     }
 }

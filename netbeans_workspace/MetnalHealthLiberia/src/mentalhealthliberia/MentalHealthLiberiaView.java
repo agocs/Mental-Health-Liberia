@@ -2200,7 +2200,7 @@ private boolean sendFile(File file, String username, String password) {
         
         try {
             // Send data
-            URL url = new URL(MentalHealthLiberiaApp.getApplication().getDataSocket());
+            URL url = new URL(MentalHealthLiberiaApp.getApplication().getUploadUrl());
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             conn.setDoOutput(true);
             OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
@@ -2211,6 +2211,9 @@ private boolean sendFile(File file, String username, String password) {
             BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             String line;
             while ((line = rd.readLine()) != null) {
+                
+                
+                
                 // TODO: check response code
                 // if unsuccessful
                 //    notify user
@@ -2254,51 +2257,7 @@ private void uploadMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GE
 }//GEN-LAST:event_uploadMenuItemActionPerformed
 
 // package scoped
-void performUpload(String username, String password) {
-    System.out.println("Uploading forms");
-    File directory = new File(MentalHealthLiberiaApp.getApplication().getDataDirectory());
-    if (directory.isDirectory()) {
-        
-        try {
-            // assemble data
-            String charset = "UTF-8";
-            String query = String.format("username=%s&password=%s", URLEncoder.encode(username, charset), URLEncoder.encode(password, charset));
-            System.out.println("Logging in with: " + query);
-            
-            // Send data
-            URL url = new URL(MentalHealthLiberiaApp.getApplication().getAuthenticationSocket());
-            HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-            conn.setDoOutput(true);
-            OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
-            wr.write(query);
-            wr.flush();
-            
-            // Get the response
-            BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-            String line;
-            while ((line = rd.readLine()) != null) {
-               System.err.println(line);
-               
-               // TODO: handle the error conditions
-               // ie, if the authorization fails
-               
-            }
-            wr.close();
-            rd.close();
-            
-            uploadFiles(directory, username, password);
-            
-        } catch (Exception e) {
-            System.err.println("Error occured while transmitting data.\n" +
-                    "Please contact a system administrator.");
-            System.err.println(e.getMessage());
-            e.printStackTrace();
-        }
-        
-    }
-}
-
-private void uploadFiles(File directory, String username, String password) {
+void uploadFiles(File directory, String username, String password) {
     File[] files = directory.listFiles();
     for (int i = 0; i < files.length; i++) {
         
