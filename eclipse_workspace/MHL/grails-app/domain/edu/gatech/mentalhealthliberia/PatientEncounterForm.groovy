@@ -10,7 +10,7 @@ class PatientEncounterForm {
 		reasonForVisit(nullable: true)
 		clinicianTrainingLevel(nullable: true)
 		referralSource(nullable: true)
-		dateOfService(nullable: true)
+		dateOfService(nullable: false)
 		patientName(nullable: true) // hash of patient name
 		dateOfBirth(nullable: true) // hash of date of birth
 		gender(nullable: true)

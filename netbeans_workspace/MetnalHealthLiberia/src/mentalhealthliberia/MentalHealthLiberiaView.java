@@ -25,14 +25,15 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.List;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
-import javax.swing.ButtonModel;
-import javax.swing.DefaultButtonModel;
 import javax.swing.Timer;
 import javax.swing.Icon;
 import javax.swing.JCheckBox;
@@ -600,8 +601,8 @@ public class MentalHealthLiberiaView extends FrameView {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         basicInformationPanel.add(jLabel10, gridBagConstraints);
 
-        dateOfService.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat(""))));
-        dateOfService.setText(resourceMap.getString("dateOfService.text")); // NOI18N
+        dateOfService.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("M/d/yyyy"))));
+        dateOfService.setText((new SimpleDateFormat("MM/dd/yyyy")).format(new Date()));
         dateOfService.setName("dateOfService"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1704,11 +1705,11 @@ private boolean extractBoolean(Object box) {
     return false;
 }
 
-private String dateOfBirth; // hash of date of birth
-private String fathersName; // hash of father's name
-private String placeOfBirth; // hash of place of birth
-private String gender;
-private String patientName; // hash of patient name
+private String dateOfBirth = ""; // hash of date of birth
+private String fathersName = ""; // hash of father's name
+private String placeOfBirth = ""; // hash of place of birth
+private String gender = ""; // one of Male or Female
+private String patientName = ""; // hash of patient name
 
 private String password; // used for authentication, not stored
 
@@ -1783,7 +1784,8 @@ private int[] convertStringToIntArray(String csv, String[] values) {
 private void loadFormValues(PatientEncounterForm formData) {
     
     // Basic Information
-    this.dateOfService.setText(formData.getDateOfService());
+    DateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+    this.dateOfService.setText(format.format(formData.getDateOfService()));
     this.clinicianID.setText(formData.getClinicianID());
     this.locationOfService.setText(formData.getLocationOfService());
     this.reasonForVisit1.setSelected(false);
@@ -2059,8 +2061,14 @@ private PatientEncounterForm buildForm() {
     PatientEncounterForm formData = new PatientEncounterForm();
     
     // Basic Information
-    formData.setDateOfService(extractValue(this.dateOfService));
-    //formData.setPatientID(extractValue(this.patientID));
+    DateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+    try {
+        if (this.dateOfService.getText() != null && !this.dateOfService.getText().equals("")) {
+            formData.setDateOfService(format.parse(this.dateOfService.getText()));
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
     formData.setClinicianID(extractValue(this.clinicianID));
     formData.setLocationOfService(extractValue(this.locationOfService));
     formData.setReasonForVisit(extractValue(this.reasonForVisit));
@@ -2145,13 +2153,34 @@ private PatientEncounterForm buildForm() {
 private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveMenuItemActionPerformed
     System.out.println("Saving form data");
     
+    boolean continueWithSave = true;
+    if (this.patientID.getText().equalsIgnoreCase("not generated")) {
+        JOptionPane.showMessageDialog(
+                this.getFrame(),
+                "You must generate a patient ID before saving");
+        continueWithSave = false;
+    }
+    if (this.clinicianID.getText().equalsIgnoreCase("")) {
+        JOptionPane.showMessageDialog(
+                this.getFrame(),
+                "You must enter your Clinician ID before saving");
+        continueWithSave = false;
+    }
+    
+    if (!continueWithSave) {
+        return;
+    }
+    
     PatientEncounterForm formData = buildForm();
     
-    File directory = new File(MentalHealthLiberiaApp.getApplication().getDataDirectory());
+    File directory = new File(MentalHealthLiberiaApp.getApplication().getDataDirectory() + "forms");
+    if (!directory.exists()) {
+        directory.mkdir();
+    }
     if (directory.isDirectory()) {
         Calendar calendar = Calendar.getInstance();
         try {
-            File newFile = new File(directory.getAbsolutePath() + "/" + formData.getPatientName() + "_" + calendar.getTimeInMillis());
+            File newFile = new File(directory.getAbsolutePath() + "/" + calendar.getTimeInMillis() + ".mhl");
             newFile.createNewFile();
             BufferedWriter writer = new BufferedWriter(new FileWriter(newFile));
             JSONSerializer serializer = new JSONSerializer();
@@ -2199,6 +2228,8 @@ private boolean sendFile(File file, String username, String password) {
         System.out.println(query);
         
         try {
+            boolean versionOutOfDate = false;
+            
             // Send data
             URL url = new URL(MentalHealthLiberiaApp.getApplication().getUploadUrl());
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
@@ -2208,27 +2239,31 @@ private boolean sendFile(File file, String username, String password) {
             wr.flush();
             
             // Get the response
-            BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-            String line;
-            while ((line = rd.readLine()) != null) {
-                
-                
-                
-                // TODO: check response code
-                // if unsuccessful
-                //    notify user
-                //    stop transfer
-                //    do not delete transmitted form
-                
-                // TODO: check version number
-                // if version numbers do not match
-                //    notify user that an update is available
-                //    if user has internet access, offer to download
-                //       provide user installation instructions
-               System.err.println(line);
+            if (conn.getResponseCode() != 200) {
+                wr.close();
+                return false;
+            } else {
+                BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                String line;
+                while ((line = rd.readLine()) != null) {
+                    Integer version = Integer.parseInt(line);
+                    if (version > MentalHealthLiberiaApp.getApplication().getVersionNum()) {
+                        // version is out of date
+                        versionOutOfDate = true;
+                    }
+                }
+                rd.close();
             }
+            
             wr.close();
-            rd.close();
+            
+            if (versionOutOfDate) {
+                JOptionPane.showMessageDialog(
+                        this.getFrame(),
+                        "There is a new version of the software available. You do not need\n" +
+                        "to download this now, but at your convienence you may download the\n" +
+                        "new version from the web site and install it.");
+            }
             
             return true;
             
@@ -2257,7 +2292,9 @@ private void uploadMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GE
 }//GEN-LAST:event_uploadMenuItemActionPerformed
 
 // package scoped
-void uploadFiles(File directory, String username, String password) {
+void uploadFiles(String username, String password) {
+    boolean errorEncountered = false;
+    File directory = new File(MentalHealthLiberiaApp.getApplication().getDataDirectory() + "forms");
     File[] files = directory.listFiles();
     for (int i = 0; i < files.length; i++) {
         
@@ -2265,7 +2302,24 @@ void uploadFiles(File directory, String username, String password) {
         if (sendFile(files[i], username, password)) {
             // delete pending file
             files[i].delete();
+        } else {
+            errorEncountered = true;
+            break;
         }
+    }
+    
+    // notify user of result
+    if (errorEncountered) {
+        JOptionPane.showMessageDialog(
+                this.getFrame(),
+                "Failed to upload forms, please try again later.",
+                "Upload Error",
+                JOptionPane.ERROR_MESSAGE);
+        
+    } else {
+        JOptionPane.showMessageDialog(
+                this.getFrame(),
+                "Forms uploaded successfully.");
     }
 }
 
@@ -2287,6 +2341,8 @@ private void clearForm() {
 
     // Basic Information
     clearField(this.dateOfService);
+    DateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+    this.dateOfService.setText(format.format(new Date()));
     clearField(this.clinicianID);
     clearField(this.locationOfService);
     clearField(this.reasonForVisit);
@@ -2384,7 +2440,7 @@ private void saveAsPdfMenuItemActionPerformed(java.awt.event.ActionEvent evt) {/
 }//GEN-LAST:event_saveAsPdfMenuItemActionPerformed
 
 private void browseFormsMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_browseFormsMenuItemActionPerformed
-    JFileChooser fc = new JFileChooser();
+    JFileChooser fc = new JFileChooser(MentalHealthLiberiaApp.getApplication().getDataDirectory() + "forms");
     
     int returnValue = fc.showOpenDialog(this.getFrame());
     if (returnValue == JFileChooser.APPROVE_OPTION) {

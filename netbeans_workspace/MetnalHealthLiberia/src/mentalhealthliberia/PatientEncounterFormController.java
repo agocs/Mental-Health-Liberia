@@ -12,6 +12,8 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JFileChooser;
@@ -92,7 +94,8 @@ public class PatientEncounterFormController {
         // Row One
         PdfPCell cell = new PdfPCell(new Phrase("Date of Service"));
         table.addCell(cell);
-        cell = new PdfPCell(new Phrase(formData.getDateOfService()));
+        DateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+        cell = new PdfPCell(new Phrase(format.format(formData.getDateOfService())));
         table.addCell(cell);
 
         cell = new PdfPCell(new Phrase("Clinician ID"));

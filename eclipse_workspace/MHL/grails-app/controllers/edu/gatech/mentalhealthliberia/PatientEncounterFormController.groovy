@@ -125,12 +125,15 @@ class PatientEncounterFormController {
 				// on the login page.
 				render(status: 403)
 			}
-					
-			PatientEncounterForm patientEncounterForm = new PatientEncounterForm(JSON.parse(params.data));
+			
+			def obj = JSON.parse(params.data)
+			obj.dateOfService = new Date(obj.dateOfService)
+			PatientEncounterForm patientEncounterForm = new PatientEncounterForm(obj);
 			
 			if (patientEncounterForm.validate() && patientEncounterForm.save()) {
-				render(status: 200, text: 'Success');
+				render(status: 200, text: Version.get(1).num, contentType: 'text/plain', encoding: 'UTF-8');
 			} else {
+				log.error(patientEncounterForm.errors)
 				render(status: 503, text: 'Failed to save form');
 			}
 		} else {
@@ -258,6 +261,7 @@ class PatientEncounterFormController {
 	}
 	
 	def uploadLatestClient = {
+		def versionNum = params.versionNum
 		def uploadedFile = request.getFile('payload')
 		if (!uploadedFile.empty) {
 			File file = new File("data/dist.zip")
@@ -265,6 +269,12 @@ class PatientEncounterFormController {
 				file.delete()
 			}
 			uploadedFile.transferTo(new File("/var/lib/tomcat6/data/dist.zip"))
+			
+			// update version number
+			def versionObj = Version.get(1)
+			versionObj.num = Integer.parseInt(versionNum)
+			versionObj.save()
+			
 			flash.message = "File uploaded successfully"
 		} else {
 			flash.message = "File upload failed"

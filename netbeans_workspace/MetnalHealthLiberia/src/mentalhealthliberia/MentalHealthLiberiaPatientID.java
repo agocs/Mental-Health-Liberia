@@ -12,7 +12,6 @@ package mentalhealthliberia;
 
 import java.util.Enumeration;
 import javax.swing.AbstractButton;
-import javax.swing.JTextField;
 
 /**
  *
@@ -236,10 +235,10 @@ public class MentalHealthLiberiaPatientID extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
 private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    view.setPatientsName("" + this.patientsName.getText().hashCode());
-    view.setDateOfBirth("" + this.dateOfBirth.getText().hashCode());
-    view.setPlaceOfBirth("" + this.placeOfBirth.getText().hashCode());
-    view.setFathersName("" + this.fathersName.getText().hashCode());
+    view.setPatientsName("" + Math.abs(this.patientsName.getText().hashCode()));
+    view.setDateOfBirth("" + Math.abs(this.dateOfBirth.getText().hashCode()));
+    view.setPlaceOfBirth("" + Math.abs(this.placeOfBirth.getText().hashCode()));
+    view.setFathersName("" + Math.abs(this.fathersName.getText().hashCode()));
     Enumeration<AbstractButton> buttons = genderGroup.getElements();
     while (buttons.hasMoreElements()) {
         AbstractButton button = buttons.nextElement();

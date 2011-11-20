@@ -6,7 +6,10 @@ package mentalhealthliberia;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
+import java.io.InputStream;
+import java.util.Properties;
 import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
 
@@ -15,30 +18,30 @@ import org.jdesktop.application.SingleFrameApplication;
  */
 public class MentalHealthLiberiaApp extends SingleFrameApplication {
 
-    private static String uploadUrl = "http://50.57.158.90:8080/MHL/patientEncounterForm/upload";
+    private final static int versionNum = 1;
+    
+    private final static String uploadUrl = "http://50.57.158.90:8080/MHL/patientEncounterForm/upload";
     private static String dataDirectory = "";
     
-    private static boolean processConfig() {
+    private static boolean processConfig(String configPath) {
         try {
-            File file = new File("app.properties");
-            StringBuffer fileData = new StringBuffer(1000);
-            BufferedReader reader = new BufferedReader(new FileReader(file));
-            char[] buf = new char[1024];
-            int numRead=0;
-            while((numRead=reader.read(buf)) != -1) {
-                fileData.append(buf, 0, numRead);
-            }
-            reader.close();
-            dataDirectory = fileData.toString();
-            File dataDir = new File(dataDirectory);
-            if (!dataDir.exists()) {
-                dataDir.mkdir();
-            }
+            File file = new File(configPath);
+            InputStream stream = new FileInputStream(file);
+            Properties config = new Properties();
+            config.load(stream);
+            
+            // load the configuration properties
+            dataDirectory = config.getProperty("data_dir");
+            
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
         return true;
+    }
+    
+    public int getVersionNum() {
+        return versionNum;
     }
     
     public String getDataDirectory() {
@@ -76,7 +79,7 @@ public class MentalHealthLiberiaApp extends SingleFrameApplication {
      * Main method launching the application.
      */
     public static void main(String[] args) {
-        if (processConfig()) {
+        if (processConfig(args[0])) {
             launch(MentalHealthLiberiaApp.class, args);
         }
     }

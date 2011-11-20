@@ -73,6 +73,14 @@
 			      <input type="file" id="payload" name="payload"/>
 			    </td>
 			  </tr>
+			  <tr class="prop">
+			    <td valign="top" class="name">
+			      <label for="versionNum">Version Number:</label>
+			    </td>
+			    <td valign="top">
+			      <input type="text" id="versionNum" name="versionNum"/>
+			    </td>
+			  </tr>
 			</table>
                 <div class="buttons">
 					<span class="button"><input class="edit" type="submit" value="Upload"></input></span>

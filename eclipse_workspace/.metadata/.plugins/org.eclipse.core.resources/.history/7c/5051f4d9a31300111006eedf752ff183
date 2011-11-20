@@ -1,0 +1,9 @@
+package edu.gatech.mentalhealthliberia
+
+class Version {
+
+	String num;
+	
+    static constraints = {
+    }
+}

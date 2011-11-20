@@ -4,6 +4,7 @@
 package mentalhealthliberia;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * POJO which stores the patient encounter form data.
@@ -68,7 +69,7 @@ public class PatientEncounterForm implements Serializable {
         return dateOfBirth;
     }
 
-    public String getDateOfService() {
+    public Date getDateOfService() {
         return dateOfService;
     }
 
@@ -336,7 +337,7 @@ public class PatientEncounterForm implements Serializable {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public void setDateOfService(String dateOfService) {
+    public void setDateOfService(Date dateOfService) {
         this.dateOfService = dateOfService;
     }
 
@@ -553,7 +554,7 @@ public class PatientEncounterForm implements Serializable {
     private String clinicianID;
     
     // Basic Information
-    private String dateOfService;
+    private Date dateOfService;
     private String locationOfService;
     private String reasonForVisit;
     private String clinicianTrainingLevel;

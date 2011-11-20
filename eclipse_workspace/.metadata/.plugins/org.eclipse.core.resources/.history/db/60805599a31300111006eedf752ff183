@@ -1,0 +1,7 @@
+package edu.gatech.mentalhealthliberia
+
+class Version {
+
+    static constraints = {
+    }
+}
