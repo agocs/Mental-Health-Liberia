@@ -7,4 +7,5 @@
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="org.apache.shiro.crypto.hash.Sha512Hash"/>
 <fullyQualifiedTypeName name="org.apache.shiro.crypto.hash.Sha256Hash"/>
+<fullyQualifiedTypeName name="edu.gatech.mentalhealthliberia.Version"/>
 </qualifiedTypeNameHistroy>
